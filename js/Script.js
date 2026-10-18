@@ -563,4 +563,9 @@ function buscarProduto(id) {
     }
     return null
 }
+
+//transforma um número em preço: 15.5 vira "R$ 15,50"
+function formatarPreco(valor) {
+    return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+}
 //#endregion
