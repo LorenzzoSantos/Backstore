@@ -1,10 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
-<circle cx="100" cy="95" r="45" fill="none" stroke="#19b5a8" stroke-width="36"/>
-<circle cx="100" cy="95" r="45" fill="none" stroke="#f4f8f8" stroke-width="36" stroke-dasharray="35.34 35.34" transform="rotate(-22 100 95)"/>
-<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-<circle cx="100" cy="95" r="63" fill="none"/>
-<circle cx="100" cy="95" r="27" fill="none"/>
-</g>
-<path d="M60 72 A46 46 0 0 1 78 55" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+<defs><radialGradient id="sh"><stop offset="0" stop-color="#0b2a2e" stop-opacity=".35"/><stop offset="1" stop-color="#0b2a2e" stop-opacity="0"/></radialGradient><linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4fe0d0"/><stop offset=".55" stop-color="#16a99b"/><stop offset="1" stop-color="#0b7a70"/></linearGradient><linearGradient id="white" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#cfe2e4"/></linearGradient><radialGradient id="tube" gradientUnits="userSpaceOnUse" cx="100" cy="92" r="64"><stop offset=".42" stop-color="#000" stop-opacity=".3"/><stop offset=".58" stop-color="#fff" stop-opacity=".35"/><stop offset=".72" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></radialGradient><linearGradient id="lt" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></linearGradient><linearGradient id="rope" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbefc8"/><stop offset="1" stop-color="#d7bf82"/></linearGradient></defs>
+<ellipse cx="100" cy="178" rx="70" ry="12" fill="url(#sh)"/>
+<circle cx="100" cy="92" r="45" fill="none" stroke="url(#teal)" stroke-width="36"/>
+<circle cx="100" cy="92" r="45" fill="none" stroke="url(#white)" stroke-width="36" stroke-dasharray="35.34 35.34" transform="rotate(-22 100 92)"/>
+<circle cx="100" cy="92" r="45" fill="none" stroke="url(#tube)" stroke-width="36"/>
+<circle cx="100" cy="92" r="45" fill="none" stroke="url(#lt)" stroke-width="36"/>
+<circle cx="100" cy="92" r="63" fill="none" stroke="#1d3a40" stroke-width="3.5"/>
+<circle cx="100" cy="92" r="27" fill="none" stroke="#1d3a40" stroke-width="3.5"/>
+<circle cx="100" cy="92" r="66" fill="none" stroke="#1d3a40" stroke-width="8" stroke-dasharray="26 26" transform="rotate(-36 100 92)"/>
+<circle cx="100" cy="92" r="66" fill="none" stroke="url(#rope)" stroke-width="4" stroke-dasharray="26 26" transform="rotate(-36 100 92)"/>
+<g stroke="#1d3a40" stroke-width="9" stroke-linecap="round"><path d="M127 92H167M73 92H33M100 65V25M100 119V159"/></g>
+<g stroke="url(#rope)" stroke-width="5" stroke-linecap="round"><path d="M127 92H167M73 92H33M100 65V25M100 119V159"/></g>
+<g stroke="#b99c5a" stroke-width="1.5" opacity=".8"><path d="M132 90l3 4M140 90l3 4M148 90l3 4M156 90l3 4M44 90l3 4M52 90l3 4M60 90l3 4M98 32l4 3M98 40l4 3M98 48l4 3M98 128l4 3M98 136l4 3M98 144l4 3"/></g>
+<path d="M54 64A54 54 0 0 1 82 42" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+<path d="M118 120A30 30 0 0 0 128 104" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+<path transform="translate(160 150) scale(1)" d="M0-9C4-3 6 0 6 3A6 6 0 0 1-6 3C-6 0-4-3 0-9Z" fill="#8fe3ea" stroke="#1d3a40" stroke-width="2"/><circle transform="translate(160 150) scale(1)" cx="-2" cy="2" r="1.6" fill="#fff"/><path transform="translate(44 154) scale(0.7)" d="M0-9C4-3 6 0 6 3A6 6 0 0 1-6 3C-6 0-4-3 0-9Z" fill="#8fe3ea" stroke="#1d3a40" stroke-width="2"/><circle transform="translate(44 154) scale(0.7)" cx="-2" cy="2" r="1.6" fill="#fff"/>
 </svg>
