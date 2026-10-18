@@ -1,11 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
-<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-<path d="M40 82L100 58L160 82L100 106Z" fill="#d9b27a"/>
-<path d="M40 82V146L100 172V106Z" fill="#c4975a"/>
-<path d="M160 82V146L100 172V106Z" fill="#a87b42"/>
-<path d="M70 70L130 94V118" fill="none" stroke="#f4f4f6" stroke-width="10"/>
-<path d="M70 70L130 94V118" fill="none" stroke-width="3"/>
-</g>
-<text x="70" y="146" font-family="Arial, sans-serif" font-weight="bold" font-size="30" fill="#2a2a33" text-anchor="middle" transform="skewY(24) translate(0 -32)">?</text>
+<defs><radialGradient id="sh" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#1a1014" stop-opacity="0.35"/><stop offset="1" stop-color="#1a1014" stop-opacity="0"/></radialGradient><linearGradient id="top" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0d4a2"/><stop offset="1" stop-color="#d9b27a"/></linearGradient><linearGradient id="lft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d2a868"/><stop offset="1" stop-color="#a87b42"/></linearGradient><linearGradient id="rgt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a87b42"/><stop offset="1" stop-color="#7a5528"/></linearGradient><pattern id="card" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 2H4" stroke="#7a5528" stroke-width=".6" opacity=".25"/></pattern></defs>
+<ellipse cx="100" cy="180" rx="72" ry="10" fill="url(#sh)"/>
+<path d="M36 84L100 58L164 84L100 110Z" fill="url(#top)" stroke="#22232a" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M36 84V148L100 176V110Z" fill="url(#lft)"/><path d="M36 84V148L100 176V110Z" fill="url(#card)"/>
+<path d="M164 84V148L100 176V110Z" fill="url(#rgt)"/><path d="M164 84V148L100 176V110Z" fill="url(#card)"/>
+<path d="M36 84V148L100 176V110ZM164 84V148L100 176V110Z" fill="none" stroke="#22232a" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M68 71L132 97V122L124 125V100L60 74Z" fill="#e8dcc0" opacity=".9" stroke="#22232a" stroke-width="2" stroke-linejoin="round"/>
+<path d="M68 71L132 97" stroke="#fff" stroke-width="2" opacity=".6"/>
+<path d="M36 84L100 110L164 84" fill="none" stroke="#fff" stroke-width="1.5" opacity=".4"/>
+<g transform="matrix(1 .44 0 1 0 0)"><rect x="46" y="92" width="44" height="30" fill="#f4ecd8" stroke="#22232a" stroke-width="2"/>
+<text x="68" y="104" font-family="Arial, sans-serif" font-size="7.5" font-weight="900" fill="#3a3a44" text-anchor="middle">SUPPLIES</text>
+<text x="68" y="118" font-family="Arial, sans-serif" font-size="12" font-weight="900" fill="#d93030" text-anchor="middle">? ? ?</text></g>
+<g transform="matrix(1 -.44 0 1 0 0)"><path d="M128 200l6 10h-4v8h-4v-8h-4z" fill="#3a2a14" opacity=".6"/><path d="M140 200l6 10h-4v8h-4v-8h-4z" fill="#3a2a14" opacity=".6"/><rect x="118" y="186" width="34" height="5" fill="#3a2a14" opacity=".5"/></g>
 </svg>
