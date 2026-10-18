@@ -1,11 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
-<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-<rect x="56" y="58" width="100" height="100" fill="#ffd23f" transform="rotate(8 106 108)"/>
-<path d="M44 46H144V118L120 146H44Z" fill="#ffe066"/>
-<path d="M120 146V124Q120 118 126 118H144" fill="#f2c94c" stroke-width="4"/>
-</g>
-<text x="92" y="78" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#2a2a33" text-anchor="middle">NÃO OLHE</text>
-<text x="92" y="98" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#2a2a33" text-anchor="middle">PARA TRÁS</text>
-<path d="M60 112q30-6 50 0" fill="none" stroke="#d93030" stroke-width="4" stroke-linecap="round"/>
+<defs><radialGradient id="sh" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#1a1014" stop-opacity="0.35"/><stop offset="1" stop-color="#1a1014" stop-opacity="0"/></radialGradient><linearGradient id="ye" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff59a"/><stop offset="1" stop-color="#ffd23f"/></linearGradient><linearGradient id="pk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb3d1"/><stop offset="1" stop-color="#ff7ab0"/></linearGradient><linearGradient id="curl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6c23a"/><stop offset="1" stop-color="#fff59a"/></linearGradient></defs>
+<ellipse cx="96" cy="170" rx="64" ry="9" fill="url(#sh)"/>
+<g transform="rotate(10 110 104)"><rect x="60" y="54" width="100" height="100" fill="url(#pk)" stroke="#1f2633" stroke-width="3"/>
+<text x="110" y="146" font-family="Arial, sans-serif" font-weight="900" font-size="10" fill="#7a2a50" text-anchor="middle">SAÍDA → ?</text></g>
+<path d="M42 44H142V118L116 146H42Z" fill="url(#ye)"/>
+<path d="M42 44H142V52H42Z" fill="#000" opacity=".06"/>
+<path d="M42 44H142V118L116 146H42Z" fill="none" stroke="#1f2633" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M116 146Q118 124 142 118Q126 128 116 146Z" fill="url(#curl)" stroke="#1f2633" stroke-width="3" stroke-linejoin="round"/>
+<text x="90" y="76" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#1f2633" text-anchor="middle" transform="rotate(-3 90 76)">NÃO OLHE</text>
+<text x="90" y="96" font-family="Arial, sans-serif" font-weight="900" font-size="14" fill="#1f2633" text-anchor="middle" transform="rotate(-3 90 96)">PARA TRÁS</text>
+<path d="M56 110q30-8 56 0" fill="none" stroke="#d93030" stroke-width="3.5" stroke-linecap="round"/>
+<path d="M58 118q24-5 44 0" fill="none" stroke="#d93030" stroke-width="2.5" stroke-linecap="round"/>
+<rect x="80" y="36" width="40" height="14" fill="#e8eef6" opacity=".75" stroke="#b9c4d4" stroke-width="1.5" transform="rotate(-4 100 43)"/>
 </svg>
