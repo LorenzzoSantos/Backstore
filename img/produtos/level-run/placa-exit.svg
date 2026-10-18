@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<rect x="20" y="52" width="160" height="96" rx="20" fill="#da2525" opacity=".22"/>
+<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M60 30V60M140 30V60" stroke-width="4"/>
+<rect x="30" y="60" width="140" height="78" rx="8" fill="#da2525"/>
+<rect x="40" y="70" width="120" height="58" rx="4" fill="#a51717" stroke-width="3"/>
+</g>
+<text x="100" y="112" font-family="Arial, sans-serif" font-weight="bold" font-size="40" fill="#f8f4f2" text-anchor="middle">EXIT</text>
+</svg>

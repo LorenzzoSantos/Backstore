@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
+<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M72 46C72 26 128 26 128 46" fill="#a51717"/>
+<path d="M72 44L50 54L24 140L46 146L60 98L60 168H140L140 98L154 146L176 140L150 54L128 44Q100 70 72 44Z" fill="#da2525"/>
+<path d="M72 132H128V160H72Z" fill="#a51717" stroke-width="4"/>
+<path d="M92 58V78M108 58V78" stroke-width="3"/>
+</g>
+<text x="100" y="118" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#f8f4f2" text-anchor="middle">RUN!</text>
+</svg>
