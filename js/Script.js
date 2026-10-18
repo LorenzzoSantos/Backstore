@@ -289,4 +289,258 @@ const catalogoBackstore = [
         imagem: "img/produtos/level-fun/convite.svg",
         maisVendido: false
     },
+    {
+        id: 26,
+        nome: "Língua de sogra =)",
+        nivel: "level-fun",
+        preco: 7.90,
+        estoque: 90,
+        descricao: "Faz barulho de festa. Ninguém vai saber onde você está. Ou vai.",
+        imagem: "img/produtos/level-fun/lingua-de-sogra.svg",
+        maisVendido: false
+    },
+    {
+        id: 27,
+        nome: "Caneca \"Hi there! =)\"",
+        nivel: "level-fun",
+        preco: 44.90,
+        estoque: 35,
+        descricao: "O cumprimento mais assustador agora na sua mesa.",
+        imagem: "img/produtos/level-fun/caneca.svg",
+        maisVendido: false
+    },
+    {
+        id: 28,
+        nome: "Confete que nunca acaba",
+        nivel: "level-fun",
+        preco: 19.90,
+        estoque: 65,
+        descricao: "Você vai achar confete em casa para sempre.",
+        imagem: "img/produtos/level-fun/confete.svg",
+        maisVendido: false
+    },
+    {
+        id: 29,
+        nome: "Máscara de Partygoer",
+        nivel: "level-fun",
+        preco: 64.90,
+        estoque: 25,
+        descricao: "Amarela, sorridente e com olhos que te seguem.",
+        imagem: "img/produtos/level-fun/mascara.svg",
+        maisVendido: false
+    },
+    {
+        id: 30,
+        nome: "Caixinha de música \"Parabéns\" desafinada",
+        nivel: "level-fun",
+        preco: 74.90,
+        estoque: 15,
+        descricao: "Toca \"Parabéns pra você\" um pouco errado. De propósito.",
+        imagem: "img/produtos/level-fun/caixinha-de-musica.svg",
+        maisVendido: false
+    },
+
+    //Level 1
+    {
+        id: 31,
+        nome: "Almond Water 500ml",
+        nivel: "level-1",
+        preco: 8.90,
+        estoque: 100,
+        descricao: "A bebida oficial dos exploradores. Hidrata e acalma.",
+        imagem: "img/produtos/level-1/almond-water.svg",
+        maisVendido: true
+    },
+    {
+        id: 32,
+        nome: "Caixa de suprimentos misteriosa",
+        nivel: "level-1",
+        preco: 129.90,
+        estoque: 20,
+        descricao: "Igual às caixas que aparecem no Level 1. Ninguém sabe o que vem dentro.",
+        imagem: "img/produtos/level-1/caixa-suprimentos.svg",
+        maisVendido: false
+    },
+    {
+        id: 33,
+        nome: "Lanterna tática",
+        nivel: "level-1",
+        preco: 79.90,
+        estoque: 30,
+        descricao: "Para quando as luzes do galpão começarem a piscar.",
+        imagem: "img/produtos/level-1/lanterna.svg",
+        maisVendido: false
+    },
+    {
+        id: 34,
+        nome: "Kit de sobrevivência",
+        nivel: "level-1",
+        preco: 149.90,
+        estoque: 15,
+        descricao: "Curativos, corda, apito e uma garrafa de Almond Water.",
+        imagem: "img/produtos/level-1/kit-sobrevivencia.svg",
+        maisVendido: false
+    },
+    {
+        id: 35,
+        nome: "Titan Smiler - 15cm",
+        nivel: "level-1",
+        preco: 15.50,
+        estoque: 42,
+        descricao: "Pelúcia assustadora de um titã sorridente.",
+        imagem: "img/produtos/level-1/titan-smiler.svg",
+        maisVendido: false
+    },
+    {
+        id: 36,
+        nome: "Mapa do Level 1 (incompleto)",
+        nivel: "level-1",
+        preco: 19.90,
+        estoque: 50,
+        descricao: "Feito por exploradores. Algumas partes ninguém voltou para desenhar.",
+        imagem: "img/produtos/level-1/mapa.svg",
+        maisVendido: false
+    },
+    {
+        id: 37,
+        nome: "Rádio comunicador",
+        nivel: "level-1",
+        preco: 139.90,
+        estoque: 18,
+        descricao: "Para falar com a sua equipe. Às vezes alguém responde que não é da equipe.",
+        imagem: "img/produtos/level-1/radio.svg",
+        maisVendido: false
+    },
+    {
+        id: 38,
+        nome: "Garrafa térmica de Almond Water",
+        nivel: "level-1",
+        preco: 69.90,
+        estoque: 30,
+        descricao: "Mantém a Almond Water geladinha por 24 horas.",
+        imagem: "img/produtos/level-1/garrafa-termica.svg",
+        maisVendido: false
+    },
+    {
+        id: 39,
+        nome: "Diário de explorador",
+        nivel: "level-1",
+        preco: 34.90,
+        estoque: 40,
+        descricao: "Para anotar tudo o que você viu. E o que te viu.",
+        imagem: "img/produtos/level-1/diario.svg",
+        maisVendido: false
+    },
+    {
+        id: 40,
+        nome: "Pilhas (pacote com 8)",
+        nivel: "level-1",
+        preco: 24.90,
+        estoque: 75,
+        descricao: "Nunca deixe a lanterna apagar.",
+        imagem: "img/produtos/level-1/pilhas.svg",
+        maisVendido: false
+    },
+
+    //Level 4
+    {
+        id: 41,
+        nome: "Caneca \"Segunda-feira eterna\"",
+        nivel: "level-4",
+        preco: 44.90,
+        estoque: 40,
+        descricao: "No Level 4 é sempre segunda-feira.",
+        imagem: "img/produtos/level-4/caneca.svg",
+        maisVendido: true
+    },
+    {
+        id: 42,
+        nome: "Crachá \"Funcionário do Level 4\"",
+        nivel: "level-4",
+        preco: 19.90,
+        estoque: 60,
+        descricao: "Cargo: explorador. Setor: desconhecido.",
+        imagem: "img/produtos/level-4/cracha.svg",
+        maisVendido: false
+    },
+    {
+        id: 43,
+        nome: "Grampeador que nunca funciona",
+        nivel: "level-4",
+        preco: 29.90,
+        estoque: 35,
+        descricao: "Clássico de escritório. Não grampeia nada.",
+        imagem: "img/produtos/level-4/grampeador.svg",
+        maisVendido: false
+    },
+    {
+        id: 44,
+        nome: "Cadeira de escritório rangente",
+        nivel: "level-4",
+        preco: 399.90,
+        estoque: 8,
+        descricao: "Range sozinha mesmo quando ninguém está sentado.",
+        imagem: "img/produtos/level-4/cadeira.svg",
+        maisVendido: false
+    },
+    {
+        id: 45,
+        nome: "Bloco de post-it com avisos estranhos",
+        nivel: "level-4",
+        preco: 12.90,
+        estoque: 80,
+        descricao: "Já vem escrito. Você não escreveu esses avisos.",
+        imagem: "img/produtos/level-4/post-it.svg",
+        maisVendido: false
+    },
+    {
+        id: 46,
+        nome: "Galão de bebedouro com Almond Water",
+        nivel: "level-4",
+        preco: 59.90,
+        estoque: 20,
+        descricao: "Os bebedouros do Level 4 têm Almond Water. Agora o seu também.",
+        imagem: "img/produtos/level-4/galao.svg",
+        maisVendido: false
+    },
+    {
+        id: 47,
+        nome: "Luminária de mesa piscante",
+        nivel: "level-4",
+        preco: 89.90,
+        estoque: 22,
+        descricao: "Pisca sem motivo, igual às do escritório.",
+        imagem: "img/produtos/level-4/luminaria.svg",
+        maisVendido: false
+    },
+    {
+        id: 48,
+        nome: "Planta de plástico empoeirada",
+        nivel: "level-4",
+        preco: 39.90,
+        estoque: 30,
+        descricao: "A única planta que sobreviveu ao Level 4.",
+        imagem: "img/produtos/level-4/planta.svg",
+        maisVendido: false
+    },
+    {
+        id: 49,
+        nome: "Pasta de arquivo \"CONFIDENCIAL\"",
+        nivel: "level-4",
+        preco: 24.90,
+        estoque: 45,
+        descricao: "Vazia. Ou pelo menos é o que dizem.",
+        imagem: "img/produtos/level-4/pasta.svg",
+        maisVendido: false
+    },
+    {
+        id: 50,
+        nome: "Carimbo \"NOCLIP APROVADO\"",
+        nivel: "level-4",
+        preco: 34.90,
+        estoque: 50,
+        descricao: "Para aprovar qualquer viagem entre os níveis.",
+        imagem: "img/produtos/level-4/carimbo.svg",
+        maisVendido: false
+    },
 ]
