@@ -1,9 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-<rect x="20" y="52" width="160" height="96" rx="20" fill="#da2525" opacity=".22"/>
-<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-<path d="M60 30V60M140 30V60" stroke-width="4"/>
-<rect x="30" y="60" width="140" height="78" rx="8" fill="#da2525"/>
-<rect x="40" y="70" width="120" height="58" rx="4" fill="#a51717" stroke-width="3"/>
-</g>
-<text x="100" y="112" font-family="Arial, sans-serif" font-weight="bold" font-size="40" fill="#f8f4f2" text-anchor="middle">EXIT</text>
+<defs><radialGradient id="sh" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#1a1014" stop-opacity="0.35"/><stop offset="1" stop-color="#1a1014" stop-opacity="0"/></radialGradient><linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff6a5c"/><stop offset="0.5" stop-color="#e02a2a"/><stop offset="1" stop-color="#8f1010"/></linearGradient><linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6b6f78"/><stop offset="0.3" stop-color="#e8eaee"/><stop offset="0.55" stop-color="#a9adb6"/><stop offset="1" stop-color="#4a4d55"/></linearGradient><filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter><radialGradient id="rg" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#ff4a3a" stop-opacity="0.55"/><stop offset="1" stop-color="#ff4a3a" stop-opacity="0"/></radialGradient><linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a70"/><stop offset="0.5" stop-color="#ff3b2f"/><stop offset="1" stop-color="#b01010"/></linearGradient></defs>
+<ellipse cx="100" cy="176" rx="64" ry="9" fill="url(#sh)"/>
+<ellipse cx="100" cy="100" rx="98" ry="70" fill="url(#rg)"/>
+<g stroke="#2a1a1e" stroke-width="2.5" fill="none"><path d="M58 18V54M142 18V54"/></g>
+<g fill="url(#metal)" stroke="#2a1a1e" stroke-width="1.5"><ellipse cx="58" cy="24" rx="3" ry="5"/><ellipse cx="58" cy="34" rx="3" ry="5"/><ellipse cx="58" cy="44" rx="3" ry="5"/><ellipse cx="142" cy="24" rx="3" ry="5"/><ellipse cx="142" cy="34" rx="3" ry="5"/><ellipse cx="142" cy="44" rx="3" ry="5"/></g>
+<rect x="24" y="54" width="152" height="88" rx="10" fill="url(#metal)" stroke="#2a1a1e" stroke-width="3.5"/>
+<rect x="34" y="64" width="132" height="68" rx="5" fill="url(#panel)" stroke="#2a1a1e" stroke-width="2.5"/>
+<text x="112" y="112" font-family="Arial, sans-serif" font-weight="900" font-size="34" fill="#fff" text-anchor="middle" filter="url(#glow)" opacity=".9">EXIT</text>
+<text x="112" y="112" font-family="Arial, sans-serif" font-weight="900" font-size="34" fill="#fff6f0" text-anchor="middle">EXIT</text>
+<g transform="translate(52 98)" fill="#fff6f0" stroke="#fff6f0" stroke-linecap="round" stroke-linejoin="round"><circle cx="2" cy="-18" r="4.5" stroke="none"/><path d="M0-11L-3 2L6 10L4 20M-3 2L-10 16M0-8L9-3M0-8L-8-4" fill="none" stroke-width="3.5"/></g>
+<path d="M38 68H162" stroke="#fff" stroke-width="3" opacity=".35" stroke-linecap="round"/>
+<g fill="#3a3d45"><circle cx="30" cy="60" r="2"/><circle cx="170" cy="60" r="2"/><circle cx="30" cy="136" r="2"/><circle cx="170" cy="136" r="2"/></g>
 </svg>

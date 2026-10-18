@@ -1,10 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
-<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
-<path d="M66 46H134V160Q134 172 122 172H78Q66 172 66 160Z" fill="#da2525"/>
-<ellipse cx="100" cy="46" rx="34" ry="10" fill="#c9c9cf"/>
-<path d="M66 58H134M66 158H134" stroke-width="3"/>
-<path d="M108 72L84 114H100L92 146L118 100H102L112 72Z" fill="#ffc83d" stroke-width="4"/>
+<defs><radialGradient id="sh" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#1a1014" stop-opacity="0.35"/><stop offset="1" stop-color="#1a1014" stop-opacity="0"/></radialGradient><linearGradient id="redh" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9a1212"/><stop offset="0.35" stop-color="#ff5a4f"/><stop offset="0.6" stop-color="#e02a2a"/><stop offset="1" stop-color="#8a0f0f"/></linearGradient><linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6b6f78"/><stop offset="0.3" stop-color="#e8eaee"/><stop offset="0.55" stop-color="#a9adb6"/><stop offset="1" stop-color="#4a4d55"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1a8"/><stop offset="0.45" stop-color="#ffc83d"/><stop offset="1" stop-color="#c98a00"/></linearGradient><clipPath id="cc"><path d="M64 50H136V160Q136 172 124 172H76Q64 172 64 160Z"/></clipPath></defs>
+<ellipse cx="100" cy="178" rx="48" ry="9" fill="url(#sh)"/>
+<path d="M64 50H136V160Q136 172 124 172H76Q64 172 64 160Z" fill="url(#redh)"/>
+<g clip-path="url(#cc)">
+<path d="M60 140L140 100V180H60Z" fill="#7a0d0d" opacity=".55"/>
+<rect x="74" y="40" width="10" height="140" fill="#fff" opacity=".3"/>
+<rect x="124" y="40" width="4" height="140" fill="#fff" opacity=".18"/>
 </g>
-<path d="M76 66V150" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".45"/>
+<path d="M64 50H136V160Q136 172 124 172H76Q64 172 64 160Z" fill="none" stroke="#2a1a1e" stroke-width="3.5" stroke-linejoin="round"/>
+<rect x="64" y="160" width="72" height="12" rx="6" fill="url(#metal)" stroke="#2a1a1e" stroke-width="3"/>
+<path d="M64 50Q64 36 78 36H122Q136 36 136 50Z" fill="url(#metal)" stroke="#2a1a1e" stroke-width="3.5" stroke-linejoin="round"/>
+<ellipse cx="100" cy="38" rx="28" ry="5" fill="#cfd2d8" stroke="#2a1a1e" stroke-width="2.5"/>
+<path d="M98 34Q106 30 112 36Q106 40 98 38Z" fill="url(#metal)" stroke="#2a1a1e" stroke-width="1.5"/>
+<path d="M108 64L82 108H98L90 142L120 94H104L114 64Z" fill="url(#gold)" stroke="#2a1a1e" stroke-width="3" stroke-linejoin="round"/>
+<text x="100" y="128" font-family="Arial, sans-serif" font-weight="900" font-size="7.5" fill="#fff" text-anchor="middle" opacity="0">.</text>
+<text x="100" y="154" font-family="Arial, sans-serif" font-weight="900" font-size="8.5" fill="#fff6f0" text-anchor="middle">ÚLTIMO FÔLEGO</text>
+<g transform="translate(70 96) scale(0.55)"><path d="M0-9C4-3 6 0 6 3A6 6 0 0 1-6 3C-6 0-4-3 0-9Z" fill="#bfe9f0" stroke="#2a1a1e" stroke-width="2"/><circle cx="-2" cy="2" r="1.6" fill="#fff"/></g><g transform="translate(128 128) scale(0.5)"><path d="M0-9C4-3 6 0 6 3A6 6 0 0 1-6 3C-6 0-4-3 0-9Z" fill="#bfe9f0" stroke="#2a1a1e" stroke-width="2"/><circle cx="-2" cy="2" r="1.6" fill="#fff"/></g><g transform="translate(78 138) scale(0.4)"><path d="M0-9C4-3 6 0 6 3A6 6 0 0 1-6 3C-6 0-4-3 0-9Z" fill="#bfe9f0" stroke="#2a1a1e" stroke-width="2"/><circle cx="-2" cy="2" r="1.6" fill="#fff"/></g>
 </svg>
