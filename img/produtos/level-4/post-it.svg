@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
+<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="56" y="58" width="100" height="100" fill="#ffd23f" transform="rotate(8 106 108)"/>
+<path d="M44 46H144V118L120 146H44Z" fill="#ffe066"/>
+<path d="M120 146V124Q120 118 126 118H144" fill="#f2c94c" stroke-width="4"/>
+</g>
+<text x="92" y="78" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#2a2a33" text-anchor="middle">NÃO OLHE</text>
+<text x="92" y="98" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#2a2a33" text-anchor="middle">PARA TRÁS</text>
+<path d="M60 112q30-6 50 0" fill="none" stroke="#d93030" stroke-width="4" stroke-linecap="round"/>
+</svg>

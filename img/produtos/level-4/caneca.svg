@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
+<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M134 82C164 82 164 136 134 136" fill="none" stroke-width="16"/>
+<path d="M134 82C164 82 164 136 134 136" fill="none" stroke="#5b7089" stroke-width="7"/>
+<path d="M54 60H138V156Q138 168 126 168H66Q54 168 54 156Z" fill="#5b7089"/>
+<ellipse cx="96" cy="60" rx="42" ry="10" fill="#8b6d4a"/>
+</g>
+<text x="96" y="108" font-family="Arial, sans-serif" font-weight="bold" font-size="17" fill="#f6f4ee" text-anchor="middle">SEGUNDA</text>
+<text x="96" y="130" font-family="Arial, sans-serif" font-weight="bold" font-size="17" fill="#f6f4ee" text-anchor="middle">ETERNA</text>
+<g fill="none" stroke="#2a2a33" stroke-width="3" stroke-linecap="round" opacity=".5"><path d="M84 46q-6-8 0-16M104 44q-6-8 0-16"/></g>
+</svg>
