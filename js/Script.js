@@ -569,3 +569,24 @@ function formatarPreco(valor) {
     return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
 }
 //#endregion
+
+
+//#region Carrinho
+//cada item do carrinho guarda o id do produto e a quantidade: { id: 35, quantidade: 2 }
+let carrinho = []
+
+//guarda o carrinho no navegador
+function salvarCarrinho() {
+    localStorage.setItem("carrinhoBackstore", JSON.stringify(carrinho))
+}
+
+//pega o carrinho que estava guardado no navegador
+function carregarCarrinho() {
+    const guardado = localStorage.getItem("carrinhoBackstore")
+    if (guardado !== null) {
+        carrinho = JSON.parse(guardado)
+    }
+}
+
+carregarCarrinho()
+//#endregion
