@@ -551,3 +551,16 @@ const catalogoBackstore = [
     //#endregion
 ]
 //#endregion
+
+
+//#region Ferramentas
+//procura um produto no catálogo pelo id
+function buscarProduto(id) {
+    for (let i = 0; i < catalogoBackstore.length; i++) {
+        if (catalogoBackstore[i].id === id) {
+            return catalogoBackstore[i]
+        }
+    }
+    return null
+}
+//#endregion
