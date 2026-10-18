@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
+<g transform="translate(-16 12) rotate(-20 100 100)">
+<path d="M150 74L184 60V142L150 128Z" fill="#ffd23f" opacity=".35"/>
+<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<rect x="28" y="86" width="82" height="30" rx="6" fill="#5c5c66"/>
+<path d="M110 80H136L150 70V132L136 122H110Z" fill="#8a8a94"/>
+<rect x="148" y="70" width="8" height="62" rx="3" fill="#fff6c4"/>
+<rect x="60" y="80" width="22" height="10" rx="3" fill="#ffd23f" stroke-width="3"/>
+</g>
+<g stroke="#2a2a33" stroke-width="3"><path d="M40 92V110M50 92V110M60 92V110"/></g>
+</g>
+</svg>

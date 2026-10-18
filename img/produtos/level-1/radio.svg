@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
+<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M118 62V20" stroke-width="8"/>
+<rect x="64" y="56" width="72" height="116" rx="12" fill="#5c5c66"/>
+<rect x="74" y="68" width="52" height="30" rx="4" fill="#b8e0a0" stroke-width="4"/>
+<circle cx="86" cy="124" r="6" fill="#8a8a94" stroke-width="3"/>
+<circle cx="114" cy="124" r="6" fill="#8a8a94" stroke-width="3"/>
+<path d="M78 146H122M78 156H122" stroke-width="3"/>
+</g>
+<circle cx="118" cy="18" r="6" fill="#ffd23f" stroke="#2a2a33" stroke-width="3"/>
+<g fill="none" stroke="#2a2a33" stroke-width="3" stroke-linecap="round"><path d="M146 40q8 10 0 20M156 32q14 18 0 36"/></g>
+<text x="100" y="89" font-family="Arial, sans-serif" font-weight="bold" font-size="14" fill="#3b6e2a" text-anchor="middle">CH 1</text>
+</svg>

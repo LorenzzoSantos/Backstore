@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
+<rect x="32" y="58" width="136" height="114" rx="10" fill="#c9c9cf" stroke="#2a2a33" stroke-width="5"/>
+<g transform="translate(42 68)"><rect x="0" y="10" width="30" height="86" rx="5" fill="#8a8a94" stroke="#2a2a33" stroke-width="5"/><rect x="0" y="10" width="30" height="30" rx="5" fill="#ffd23f" stroke="#2a2a33" stroke-width="5"/><rect x="9" y="2" width="12" height="9" rx="2" fill="#c9c9cf" stroke="#2a2a33" stroke-width="4"/><path d="M10 66h10M15 61v10" stroke="#f4f4f6" stroke-width="4" stroke-linecap="round"/></g>
+<g transform="translate(74 68)"><rect x="0" y="10" width="30" height="86" rx="5" fill="#8a8a94" stroke="#2a2a33" stroke-width="5"/><rect x="0" y="10" width="30" height="30" rx="5" fill="#ffd23f" stroke="#2a2a33" stroke-width="5"/><rect x="9" y="2" width="12" height="9" rx="2" fill="#c9c9cf" stroke="#2a2a33" stroke-width="4"/><path d="M10 66h10M15 61v10" stroke="#f4f4f6" stroke-width="4" stroke-linecap="round"/></g>
+<g transform="translate(106 68)"><rect x="0" y="10" width="30" height="86" rx="5" fill="#8a8a94" stroke="#2a2a33" stroke-width="5"/><rect x="0" y="10" width="30" height="30" rx="5" fill="#ffd23f" stroke="#2a2a33" stroke-width="5"/><rect x="9" y="2" width="12" height="9" rx="2" fill="#c9c9cf" stroke="#2a2a33" stroke-width="4"/><path d="M10 66h10M15 61v10" stroke="#f4f4f6" stroke-width="4" stroke-linecap="round"/></g>
+<g transform="translate(138 68)"><rect x="0" y="10" width="30" height="86" rx="5" fill="#8a8a94" stroke="#2a2a33" stroke-width="5"/><rect x="0" y="10" width="30" height="30" rx="5" fill="#ffd23f" stroke="#2a2a33" stroke-width="5"/><rect x="9" y="2" width="12" height="9" rx="2" fill="#c9c9cf" stroke="#2a2a33" stroke-width="4"/><path d="M10 66h10M15 61v10" stroke="#f4f4f6" stroke-width="4" stroke-linecap="round"/></g>
+<rect x="32" y="128" width="136" height="44" rx="6" fill="#5c5c66" stroke="#2a2a33" stroke-width="5"/>
+<text x="100" y="158" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#f4f4f6" text-anchor="middle">x8</text>
+</svg>
