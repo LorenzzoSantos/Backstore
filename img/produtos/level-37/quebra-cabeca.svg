@@ -10,11 +10,19 @@
 <rect x="80" y="62" width="24" height="20" fill="#9fd4d8"/>
 <g stroke="#9fd4d8" stroke-width="1.3"><path d="M40 38L80 62M144 38L104 62M40 62L80 72M144 62L104 72M40 90L80 82M144 90L104 82M58 38V100M126 38V100M80 62V82M104 62V82M92 62V82M80 72H104"/></g>
 <path d="M52 108Q70 102 88 108T124 108" fill="none" stroke="#e8fbfc" stroke-width="2" opacity=".8"/>
+<g stroke="#1d3a40" stroke-width="1.2">
+<rect x="54" y="56" width="7" height="52" fill="#ffffff"/><rect x="54" y="56" width="2.5" height="52" fill="#d5e8ea" stroke="none"/>
+<rect x="123" y="56" width="7" height="52" fill="#ffffff"/><rect x="127.5" y="56" width="2.5" height="52" fill="#d5e8ea" stroke="none"/>
+<rect x="78" y="64" width="4" height="26" fill="#ffffff"/><rect x="102" y="64" width="4" height="26" fill="#ffffff"/>
+</g>
+<g stroke="#1d3a40" stroke-width="1"><path d="M108 118H142V112H112Z" fill="#e8f6f7"/><path d="M112 112H140V106H116Z" fill="#f4fbfb"/><path d="M116 106H138V100H120Z" fill="#ffffff"/></g>
+<path d="M104 116Q122 110 144 114V118H104Z" fill="#4cc3cc" opacity=".75"/>
+<g fill="#e8fbfc" opacity=".8"><ellipse cx="57" cy="108" rx="7" ry="1.6"/><ellipse cx="126" cy="108" rx="7" ry="1.6"/><ellipse cx="80" cy="90" rx="4" ry="1"/><ellipse cx="104" cy="90" rx="4" ry="1"/></g>
 <circle cx="92" cy="50" r="7" fill="#fffbe0" opacity=".9"/>
 </g>
 <rect x="40" y="38" width="104" height="80" fill="none" stroke="#1d3a40" stroke-width="2.5"/>
-<rect x="96" y="104" width="44" height="12" rx="2" fill="#f4fbfb" stroke="#1d3a40" stroke-width="2"/>
-<text x="118" y="113" font-family="Arial, sans-serif" font-weight="bold" font-size="9" fill="#0b7a70" text-anchor="middle">1000 pçs</text>
+<rect x="100" y="41" width="42" height="12" rx="2" fill="#f4fbfb" stroke="#1d3a40" stroke-width="2"/>
+<text x="121" y="50" font-family="Arial, sans-serif" font-weight="bold" font-size="9" fill="#0b7a70" text-anchor="middle">1000 pçs</text>
 <text x="44" y="126" font-family="Arial, sans-serif" font-weight="bold" font-size="7" fill="#fff" letter-spacing=".5">CORREDORES AZULEJADOS</text>
 <g transform="translate(26 120) scale(.42) rotate(-12 100 100)"><use href="#pc" fill="url(#teal)" stroke="#1d3a40" stroke-width="8" stroke-linejoin="round"/><path d="M62 70L90 70" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity=".6"/></g>
 <g transform="translate(110 112) scale(.46) rotate(16 100 100)"><use href="#pc" fill="url(#white)" stroke="#1d3a40" stroke-width="8" stroke-linejoin="round"/><path d="M78 30V170M100 30V170M122 30V170M40 82H180M40 104H180M40 126H180" stroke="#9fd4d8" stroke-width="4" clip-path="none" opacity=".0"/><path d="M64 70L92 70" stroke="#fff" stroke-width="6" stroke-linecap="round"/></g>
