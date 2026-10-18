@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs><clipPath id="c"><path d="M86 50L114 50L114 62C114 70 132 74 132 90L132 160C132 168 126 172 118 172L82 172C74 172 68 168 68 160L68 90C68 74 86 70 86 62Z"/></clipPath></defs>
+<ellipse cx="100" cy="176" rx="62" ry="9" fill="#000" opacity=".12"/>
+<path d="M86 50L114 50L114 62C114 70 132 74 132 90L132 160C132 168 126 172 118 172L82 172C74 172 68 168 68 160L68 90C68 74 86 70 86 62Z" fill="#e8f7f8"/>
+<path d="M60 104Q80 96 100 104T140 104V180H60Z" fill="#7fd6dc" clip-path="url(#c)"/>
+<path d="M78 92V160" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+<g stroke="#2a2a33" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+<path d="M86 50L114 50L114 62C114 70 132 74 132 90L132 160C132 168 126 172 118 172L82 172C74 172 68 168 68 160L68 90C68 74 86 70 86 62Z" fill="none"/>
+<rect x="82" y="30" width="36" height="20" rx="4" fill="#19b5a8"/>
+<rect x="68" y="118" width="64" height="34" fill="#f4f8f8" stroke-width="4"/>
+</g>
+<text x="100" y="146" font-family="Arial, sans-serif" font-weight="bold" font-size="30" fill="#19b5a8" text-anchor="middle">∞</text>
+</svg>
