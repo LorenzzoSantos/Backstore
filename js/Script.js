@@ -1,4 +1,4 @@
-//parte dos níveis
+//#region Níveis
 const niveis = [
     {
         chave: "level-37",
@@ -31,10 +31,11 @@ const niveis = [
         descricao: "Um escritório vazio onde o expediente nunca termina."
     }
 ]
+//#endregion
 
-//parte do catálogo
+//#region Catálogo
 const catalogoBackstore = [
-    //Level 37
+    //#region Level 37
     {
         id: 1,
         nome: "Boia \"Sublimity\"",
@@ -135,8 +136,9 @@ const catalogoBackstore = [
         imagem: "img/produtos/level-37/quebra-cabeca.svg",
         maisVendido: false
     },
+    //#endregion
 
-    //Level !
+    //#region Level !
     {
         id: 11,
         nome: "Tênis de corrida \"CORRE!\"",
@@ -237,8 +239,9 @@ const catalogoBackstore = [
         imagem: "img/produtos/level-run/medalha.svg",
         maisVendido: false
     },
+    //#endregion
 
-    //Level Fun =)
+    //#region Level Fun =)
     {
         id: 21,
         nome: "Pelúcia de Partygoer 30cm",
@@ -339,8 +342,9 @@ const catalogoBackstore = [
         imagem: "img/produtos/level-fun/caixinha-de-musica.svg",
         maisVendido: false
     },
+    //#endregion
 
-    //Level 1
+    //#region Level 1
     {
         id: 31,
         nome: "Almond Water 500ml",
@@ -441,8 +445,9 @@ const catalogoBackstore = [
         imagem: "img/produtos/level-1/pilhas.svg",
         maisVendido: false
     },
+    //#endregion
 
-    //Level 4
+    //#region Level 4
     {
         id: 41,
         nome: "Caneca \"Segunda-feira eterna\"",
@@ -543,4 +548,6 @@ const catalogoBackstore = [
         imagem: "img/produtos/level-4/carimbo.svg",
         maisVendido: false
     },
+    //#endregion
 ]
+//#endregion
