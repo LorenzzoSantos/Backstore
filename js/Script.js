@@ -571,8 +571,12 @@ function formatarPreco(valor) {
 
 let timerDoAviso = null
 
-//mostra uma mensagem no topo da tela (elemento com id="aviso") e esconde depois de 3 segundos
-function mostrarAviso(texto) {
+//mostra uma mensagem no topo da tela (elemento com id="aviso") e esconde depois de alguns segundos (3 se não disser quantos)
+function mostrarAviso(texto, segundos) {
+    if (segundos === undefined) {
+        segundos = 3
+    }
+
     const aviso = document.getElementById("aviso")
     if (aviso === null) {
         console.log(texto)
@@ -585,7 +589,7 @@ function mostrarAviso(texto) {
     clearTimeout(timerDoAviso)
     timerDoAviso = setTimeout(function () {
         aviso.classList.remove("visivel")
-    }, 3000)
+    }, segundos * 1000)
 }
 //#endregion
 
@@ -1156,6 +1160,38 @@ function mostrarCarrinho() {
         linha.appendChild(remover)
         lista.appendChild(linha)
     }
+}
+
+//botão "Comprar": mostra o que foi comprado e esvazia o carrinho
+function finalizarCompra() {
+    if (carrinho.length === 0) {
+        mostrarAviso("Seu carrinho está vazio.")
+        return
+    }
+
+    //monta a lista do que foi comprado, tipo "2x Titan Smiler - 15cm"
+    let itensComprados = []
+    for (let i = 0; i < carrinho.length; i++) {
+        const produto = buscarProduto(carrinho[i].id)
+        if (produto !== null) {
+            itensComprados.push(carrinho[i].quantidade + "x " + produto.nome)
+        }
+    }
+
+    const mensagem = "Você comprou: " + itensComprados.join(", ") + ". Total: " + formatarPreco(calcularTotal()) + ". Obrigado por comprar na Backstore!"
+
+    //esvazia o carrinho
+    carrinho = []
+    salvarCarrinho()
+    mostrarCarrinho()
+
+    mostrarAviso(mensagem, 8)
+    window.scrollTo({ top: 0, behavior: "smooth" })
+}
+
+const botaoComprar = document.getElementById("botao-comprar")
+if (botaoComprar !== null) {
+    botaoComprar.addEventListener("click", finalizarCompra)
 }
 
 mostrarCarrinho()
