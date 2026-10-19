@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs><radialGradient id="sh"><stop offset="0" stop-color="#0b2a2e" stop-opacity=".35"/><stop offset="1" stop-color="#0b2a2e" stop-opacity="0"/></radialGradient><linearGradient id="teal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4fe0d0"/><stop offset=".55" stop-color="#16a99b"/><stop offset="1" stop-color="#0b7a70"/></linearGradient><radialGradient id="glow"><stop offset="0" stop-color="#9ff3f2" stop-opacity=".75"/><stop offset="1" stop-color="#9ff3f2" stop-opacity="0"/></radialGradient><linearGradient id="cube" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".6" stop-color="#d5f6f6"/><stop offset="1" stop-color="#9fe0e3"/></linearGradient><linearGradient id="side" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#a6e3e6"/><stop offset="1" stop-color="#6fc2c8"/></linearGradient><linearGradient id="metal" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b6e66"/><stop offset=".4" stop-color="#3fd3c3"/><stop offset="1" stop-color="#0b6e66"/></linearGradient><pattern id="grid" width="19" height="19" patternUnits="userSpaceOnUse" x="56" y="44"><rect width="19" height="19" fill="none" stroke="#7fd0d6" stroke-width="2"/><rect x="2" y="2" width="6" height="3" fill="#fff" opacity=".7"/></pattern><pattern id="grids" width="12" height="19" patternUnits="userSpaceOnUse" x="132" y="44"><rect width="12" height="19" fill="none" stroke="#5cb4bb" stroke-width="2"/></pattern></defs>
+<ellipse cx="104" cy="176" rx="62" ry="9" fill="url(#sh)"/>
+<circle cx="100" cy="92" r="82" fill="url(#glow)"/>
+<path d="M132 44L152 34V122L132 136Z" fill="url(#side)"/>
+<path d="M132 44L152 34V122L132 136Z" fill="url(#grids)" opacity=".8"/>
+<path d="M56 44L76 34H152L132 44Z" fill="#e9fbfb" stroke="#1d3a40" stroke-width="3" stroke-linejoin="round"/>
+<rect x="56" y="44" width="76" height="92" fill="url(#cube)"/>
+<rect x="56" y="44" width="76" height="92" fill="url(#grid)"/>
+<rect x="64" y="56" width="40" height="40" fill="#fff" opacity=".45"/>
+<path d="M56 44H132V136H56ZM132 44L152 34V122L132 136" fill="none" stroke="#1d3a40" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M62 50V128" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+<path d="M70 136H136L142 148H64Z" fill="url(#metal)" stroke="#1d3a40" stroke-width="3" stroke-linejoin="round"/>
+<rect x="54" y="148" width="98" height="18" rx="7" fill="url(#teal)" stroke="#1d3a40" stroke-width="3.5"/>
+<path d="M62 153H120" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+<circle cx="138" cy="157" r="4" fill="#bff5ee" stroke="#1d3a40" stroke-width="2"/>
+<path d="M152 158C176 158 170 176 186 176" fill="none" stroke="#1d3a40" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

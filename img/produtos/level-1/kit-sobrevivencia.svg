@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs><radialGradient id="sh" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#1a1014" stop-opacity="0.35"/><stop offset="1" stop-color="#1a1014" stop-opacity="0"/></radialGradient><linearGradient id="gr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b4b5be"/><stop offset="0.5" stop-color="#8a8b95"/><stop offset="1" stop-color="#55565f"/></linearGradient><linearGradient id="st" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7d8088"/><stop offset="0.25" stop-color="#f2f3f5"/><stop offset="0.5" stop-color="#b6b9c0"/><stop offset="0.75" stop-color="#e6e7ea"/><stop offset="1" stop-color="#6a6d75"/></linearGradient><linearGradient id="wh" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e2e2e6"/></linearGradient><linearGradient id="red" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff5a4f"/><stop offset="1" stop-color="#b01818"/></linearGradient></defs>
+<ellipse cx="100" cy="178" rx="72" ry="9" fill="url(#sh)"/>
+<path d="M78 62V46Q78 36 88 36H112Q122 36 122 46V62" fill="none" stroke="#22232a" stroke-width="10"/>
+<path d="M78 62V46Q78 36 88 36H112Q122 36 122 46V62" fill="none" stroke="url(#st)" stroke-width="5"/>
+<rect x="30" y="58" width="140" height="112" rx="14" fill="url(#gr)" stroke="#22232a" stroke-width="3.5"/>
+<path d="M30 92H170" stroke="#22232a" stroke-width="3"/><path d="M34 95H166" stroke="#fff" stroke-width="1.5" opacity=".35"/>
+<path d="M38 66H162" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".4"/>
+<g fill="url(#st)" stroke="#22232a" stroke-width="2.5"><rect x="44" y="82" width="16" height="20" rx="3"/><rect x="140" y="82" width="16" height="20" rx="3"/></g>
+<g fill="#3d3e46"><circle cx="40" cy="160" r="2.5"/><circle cx="160" cy="160" r="2.5"/><circle cx="40" cy="68" r="2.5"/><circle cx="160" cy="68" r="2.5"/></g>
+<rect x="74" y="106" width="52" height="52" rx="8" fill="url(#wh)" stroke="#22232a" stroke-width="3"/>
+<path d="M92 112H108V124H120V140H108V152H92V140H80V124H92Z" fill="url(#red)" stroke="#22232a" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M94 116H104" stroke="#fff" stroke-width="2" opacity=".6" stroke-linecap="round"/>
+</svg>

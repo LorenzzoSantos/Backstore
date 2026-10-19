@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs><radialGradient id="sh" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#1a1014" stop-opacity="0.35"/><stop offset="1" stop-color="#1a1014" stop-opacity="0"/></radialGradient><linearGradient id="st" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7d8088"/><stop offset="0.25" stop-color="#f2f3f5"/><stop offset="0.5" stop-color="#b6b9c0"/><stop offset="0.75" stop-color="#e6e7ea"/><stop offset="1" stop-color="#6a6d75"/></linearGradient><linearGradient id="ye" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff38a"/><stop offset="0.5" stop-color="#ffd23f"/><stop offset="1" stop-color="#d99a0a"/></linearGradient><linearGradient id="cellg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3d3e46"/><stop offset="0.3" stop-color="#8a8b95"/><stop offset="0.6" stop-color="#55565f"/><stop offset="1" stop-color="#2a2b31"/></linearGradient><linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9eaee"/><stop offset="1" stop-color="#a9abb4"/></linearGradient><linearGradient id="blis" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0.55"/><stop offset="0.4" stop-color="#fff" stop-opacity="0.1"/><stop offset="1" stop-color="#fff" stop-opacity="0.3"/></linearGradient></defs>
+<ellipse cx="100" cy="182" rx="74" ry="8" fill="url(#sh)"/>
+<rect x="28" y="32" width="144" height="142" rx="10" fill="url(#card)" stroke="#22232a" stroke-width="3.5"/>
+<circle cx="100" cy="44" r="6" fill="#fff" stroke="#22232a" stroke-width="2.5"/>
+<g transform="translate(38 58)"><rect x="9" y="0" width="12" height="8" rx="2" fill="url(#st)" stroke="#22232a" stroke-width="2.5"/>
+<rect x="0" y="7" width="30" height="80" rx="5" fill="url(#cellg)" stroke="#22232a" stroke-width="3"/>
+<rect x="0" y="7" width="30" height="26" rx="5" fill="url(#ye)" stroke="#22232a" stroke-width="3"/>
+<path d="M10 58h10M15 53v10" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<rect x="4" y="12" width="4" height="70" rx="2" fill="#fff" opacity=".45"/></g><g transform="translate(70 58)"><rect x="9" y="0" width="12" height="8" rx="2" fill="url(#st)" stroke="#22232a" stroke-width="2.5"/>
+<rect x="0" y="7" width="30" height="80" rx="5" fill="url(#cellg)" stroke="#22232a" stroke-width="3"/>
+<rect x="0" y="7" width="30" height="26" rx="5" fill="url(#ye)" stroke="#22232a" stroke-width="3"/>
+<path d="M10 58h10M15 53v10" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<rect x="4" y="12" width="4" height="70" rx="2" fill="#fff" opacity=".45"/></g><g transform="translate(102 58)"><rect x="9" y="0" width="12" height="8" rx="2" fill="url(#st)" stroke="#22232a" stroke-width="2.5"/>
+<rect x="0" y="7" width="30" height="80" rx="5" fill="url(#cellg)" stroke="#22232a" stroke-width="3"/>
+<rect x="0" y="7" width="30" height="26" rx="5" fill="url(#ye)" stroke="#22232a" stroke-width="3"/>
+<path d="M10 58h10M15 53v10" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<rect x="4" y="12" width="4" height="70" rx="2" fill="#fff" opacity=".45"/></g><g transform="translate(134 58)"><rect x="9" y="0" width="12" height="8" rx="2" fill="url(#st)" stroke="#22232a" stroke-width="2.5"/>
+<rect x="0" y="7" width="30" height="80" rx="5" fill="url(#cellg)" stroke="#22232a" stroke-width="3"/>
+<rect x="0" y="7" width="30" height="26" rx="5" fill="url(#ye)" stroke="#22232a" stroke-width="3"/>
+<path d="M10 58h10M15 53v10" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<rect x="4" y="12" width="4" height="70" rx="2" fill="#fff" opacity=".45"/></g>
+<rect x="34" y="54" width="132" height="96" rx="10" fill="url(#blis)" stroke="#8a8b95" stroke-width="2"/>
+<rect x="28" y="140" width="144" height="34" rx="8" fill="url(#ye)" stroke="#22232a" stroke-width="3.5"/>
+<text x="58" y="164" font-family="Arial, sans-serif" font-weight="900" font-size="18" fill="#22232a" text-anchor="middle">x8</text>
+<text x="128" y="162" font-family="Arial, sans-serif" font-weight="900" font-size="10" fill="#22232a" text-anchor="middle">POWER AA</text>
+<path d="M90 146L84 158H92L86 170" fill="none" stroke="#22232a" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>

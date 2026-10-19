@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs><radialGradient id="sh" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#1a1014" stop-opacity="0.35"/><stop offset="1" stop-color="#1a1014" stop-opacity="0"/></radialGradient><linearGradient id="or" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffb066"/><stop offset="0.5" stop-color="#f57a1f"/><stop offset="1" stop-color="#b84a00"/></linearGradient><linearGradient id="ye" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff38a"/><stop offset="0.5" stop-color="#ffd23f"/><stop offset="1" stop-color="#e8a20f"/></linearGradient><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1a8"/><stop offset="0.45" stop-color="#ffc83d"/><stop offset="1" stop-color="#c98a00"/></linearGradient><linearGradient id="foil" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0.0"/><stop offset="0.5" stop-color="#fff" stop-opacity="0.6"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+<ellipse cx="80" cy="176" rx="56" ry="9" fill="url(#sh)"/>
+<path d="M36 170L68 88L118 138Z" fill="url(#or)" stroke="#2e1a12" stroke-width="3.5" stroke-linejoin="round"/>
+<clipPath id="cp"><path d="M36 170L68 88L118 138Z"/></clipPath>
+<g clip-path="url(#cp)"><g stroke="url(#ye)" stroke-width="8"><path d="M20 130L120 100M20 154L120 124M20 178L120 148"/></g><rect x="40" y="80" width="20" height="100" fill="url(#foil)" transform="rotate(20 50 130)"/></g>
+<path d="M36 170L68 88L118 138Z" fill="none" stroke="#2e1a12" stroke-width="3.5" stroke-linejoin="round"/>
+<ellipse cx="93" cy="113" rx="10" ry="36" fill="url(#gold)" stroke="#2e1a12" stroke-width="3" transform="rotate(-45 93 113)"/>
+<path d="M44 168Q30 176 38 186" fill="none" stroke="#2e1a12" stroke-width="2"/><circle cx="38" cy="186" r="3" fill="#e8202a" stroke="#2e1a12" stroke-width="1.5"/>
+<g stroke="#2e1a12" stroke-width="2" stroke-linejoin="round">
+<rect x="104" y="44" width="14" height="8" fill="#e8202a" transform="rotate(20 111 48)"/>
+<rect x="142" y="66" width="14" height="8" fill="#2f6fe0" transform="rotate(-30 149 70)"/>
+<rect x="86" y="26" width="14" height="8" fill="#ffc83d" transform="rotate(50 93 30)"/>
+<rect x="160" y="110" width="14" height="8" fill="#ffc83d" transform="rotate(15 167 114)"/>
+<rect x="124" y="96" width="14" height="8" fill="#e8202a" transform="rotate(-50 131 100)"/>
+<rect x="150" y="34" width="12" height="7" fill="#2f6fe0" transform="rotate(35 156 37)"/>
+<circle cx="130" cy="34" r="5.5" fill="#2f6fe0"/><circle cx="168" cy="88" r="5" fill="#f16100"/><circle cx="112" cy="74" r="5.5" fill="#ffc83d"/><circle cx="62" cy="54" r="4.5" fill="#e8202a"/>
+</g>
+<g fill="none" stroke-width="3.5" stroke-linecap="round"><path d="M110 90C120 70 140 80 150 60" stroke="#e8202a"/><path d="M104 104C130 100 136 120 170 126" stroke="#2f6fe0"/><path d="M96 92C90 70 72 66 76 40" stroke="#ffc83d"/></g>
+<path transform="translate(176 40) scale(0.9)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2Z" fill="#ffc83d"/><path transform="translate(60 80) scale(0.6)" d="M0-8L2-2L8 0L2 2L0 8L-2 2L-8 0L-2-2Z" fill="#fff"/>
+</svg>

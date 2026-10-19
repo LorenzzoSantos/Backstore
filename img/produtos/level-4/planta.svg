@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs><radialGradient id="sh" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#1a1014" stop-opacity="0.35"/><stop offset="1" stop-color="#1a1014" stop-opacity="0"/></radialGradient><linearGradient id="pane" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2e36"/><stop offset="1" stop-color="#0c0e12"/></linearGradient><linearGradient id="gn" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9fd67a"/><stop offset="1" stop-color="#3f7a2a"/></linearGradient><linearGradient id="gn2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#c2e89a"/><stop offset="1" stop-color="#5a9a3a"/></linearGradient><linearGradient id="pot" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5e3c18"/><stop offset="0.35" stop-color="#b07a44"/><stop offset="0.7" stop-color="#8a5a2a"/><stop offset="1" stop-color="#4a2e12"/></linearGradient><linearGradient id="soil" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3420"/><stop offset="1" stop-color="#2a1c10"/></linearGradient></defs>
+<ellipse cx="100" cy="178" rx="52" ry="8" fill="url(#sh)"/>
+<rect x="28" y="12" width="144" height="92" rx="3" fill="#c9d0da" stroke="#1f2633" stroke-width="3"/>
+<g fill="url(#pane)" stroke="#1f2633" stroke-width="2"><rect x="36" y="20" width="62" height="36"/><rect x="102" y="20" width="62" height="36"/><rect x="36" y="60" width="62" height="36"/><rect x="102" y="60" width="62" height="36"/></g>
+<path d="M44 50L66 26M110 90L132 66" stroke="#fff" stroke-width="2.5" opacity=".18" stroke-linecap="round"/>
+<rect x="22" y="102" width="156" height="8" rx="2" fill="#b4bcc8" stroke="#1f2633" stroke-width="2.5"/>
+<path d="M100 120C78 96 50 102 38 82C66 74 90 90 100 120Z" fill="url(#gn)" stroke="#1f2633" stroke-width="3" stroke-linejoin="round"/>
+<path d="M100 120C122 92 150 98 162 76C134 70 110 88 100 120Z" fill="url(#gn)" stroke="#1f2633" stroke-width="3" stroke-linejoin="round"/>
+<path d="M100 122C90 88 94 56 108 30C122 58 114 92 100 122Z" fill="url(#gn2)" stroke="#1f2633" stroke-width="3" stroke-linejoin="round"/>
+<path d="M100 118C84 80 66 64 54 46C82 52 98 80 100 118Z" fill="url(#gn2)" stroke="#1f2633" stroke-width="3" stroke-linejoin="round"/>
+<g fill="none" stroke="#2f5a1a" stroke-width="1.5" opacity=".7"><path d="M98 116C84 100 64 92 46 84M102 116C118 98 138 90 154 80M100 118C102 86 104 60 108 36M99 114C88 86 74 68 60 52"/></g>
+<path d="M64 118H136L126 172H74Z" fill="url(#pot)" stroke="#1f2633" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M60 110H140V126H60Z" fill="url(#pot)" stroke="#1f2633" stroke-width="3.5" stroke-linejoin="round"/>
+<ellipse cx="100" cy="112" rx="36" ry="3" fill="url(#soil)"/>
+<path d="M74 132V166" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".3"/>
+<g fill="#cfc6b0" opacity=".95"><circle cx="64" cy="92" r="2.5"/><circle cx="134" cy="86" r="2.5"/><circle cx="106" cy="58" r="2.5"/><circle cx="112" cy="80" r="2"/><circle cx="80" cy="98" r="2"/><circle cx="148" cy="84" r="1.8"/><circle cx="62" cy="58" r="2"/></g>
+<path d="M138 128L170 119L174 133L142 142Z" fill="#f6f1e4" stroke="#1f2633" stroke-width="2"/>
+<text x="156" y="133.5" font-family="Arial, sans-serif" font-size="6" font-weight="900" fill="#1f2633" text-anchor="middle" transform="rotate(-16 156 131)">R$ 39,90</text>
+<g fill="none" stroke="#b9b2a0" stroke-width="1" opacity=".9"><path d="M60 110L40 92M60 110L36 106M60 110L46 84M44 100Q46 94 50 96"/></g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+<defs><radialGradient id="sh" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#1a1014" stop-opacity="0.35"/><stop offset="1" stop-color="#1a1014" stop-opacity="0"/></radialGradient><linearGradient id="grh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a4b53"/><stop offset="0.35" stop-color="#c9cad2"/><stop offset="0.6" stop-color="#8a8b95"/><stop offset="1" stop-color="#3d3e46"/></linearGradient><linearGradient id="dk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5c5d66"/><stop offset="1" stop-color="#2a2b31"/></linearGradient><linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff3b0" stop-opacity="0.75"/><stop offset="1" stop-color="#fff3b0" stop-opacity="0"/></linearGradient><radialGradient id="lensg" cx="0.5" cy="0.5" r="0.5" ><stop offset="0" stop-color="#fff"/><stop offset="0.5" stop-color="#fff7c8"/><stop offset="1" stop-color="#d9c35a"/></radialGradient><linearGradient id="ye" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff38a"/><stop offset="0.5" stop-color="#ffd23f"/><stop offset="1" stop-color="#d99a0a"/></linearGradient><pattern id="knurl" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0H5M0 0V5" stroke="#000" stroke-width="1" opacity=".45"/></pattern></defs>
+<ellipse cx="92" cy="176" rx="62" ry="10" fill="url(#sh)"/>
+<g transform="translate(-12 18) rotate(-22 100 100)">
+<path d="M150 80L184 66V136L150 122Z" fill="url(#beam)"/>
+<rect x="22" y="86" width="96" height="30" rx="7" fill="url(#dk)" stroke="#22232a" stroke-width="3.5"/>
+<rect x="34" y="86" width="50" height="30" fill="url(#knurl)"/>
+<path d="M34 86V116M84 86V116" stroke="#22232a" stroke-width="2"/>
+<path d="M118 80H136L150 70V132L136 122H118Z" fill="url(#grh)" stroke="#22232a" stroke-width="3.5" stroke-linejoin="round"/>
+<g stroke="#3d3e46" stroke-width="2"><path d="M124 82V120M130 82V120"/></g>
+<ellipse cx="151" cy="101" rx="6" ry="31" fill="url(#lensg)" stroke="#22232a" stroke-width="3"/>
+<rect x="94" y="78" width="16" height="9" rx="3" fill="url(#ye)" stroke="#22232a" stroke-width="2.5"/>
+<path d="M22 101C10 101 8 120 18 126" fill="none" stroke="#22232a" stroke-width="3"/>
+<path d="M30 92H112" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".35"/>
+</g>
+</svg>
