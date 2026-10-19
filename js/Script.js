@@ -588,5 +588,38 @@ function carregarCarrinho() {
     }
 }
 
+//coloca um produto no carrinho (ou aumenta a quantidade se ele já estiver lá)
+function adicionarAoCarrinho(idDesejado) {
+    const produto = buscarProduto(idDesejado)
+
+    //se o produto não existe, para aqui
+    if (produto === null) {
+        console.log("Produto não existe.")
+        return
+    }
+
+    //procura se o produto já está no carrinho
+    let itemNoCarrinho = null
+    for (let i = 0; i < carrinho.length; i++) {
+        if (carrinho[i].id === idDesejado) {
+            itemNoCarrinho = carrinho[i]
+        }
+    }
+
+    if (itemNoCarrinho === null) {
+        //ainda não está: entra com quantidade 1
+        carrinho.push({ id: idDesejado, quantidade: 1 })
+    } else if (itemNoCarrinho.quantidade < produto.estoque) {
+        //já está: soma mais 1
+        itemNoCarrinho.quantidade++
+    } else {
+        console.log("Não temos mais " + produto.nome + " no estoque.")
+        return
+    }
+
+    salvarCarrinho()
+    console.log(produto.nome + " foi adicionado à mochila!")
+}
+
 carregarCarrinho()
 //#endregion
