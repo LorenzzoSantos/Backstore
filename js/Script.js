@@ -355,75 +355,34 @@ if (estaNaPaginaInicial()) {
 
 //#region Página do produto
 //mostra o produto do endereço (ex.: produto.html?id=35) no elemento com id="detalhe-produto"
-function mostrarDetalheProduto() {
-    const area = document.getElementById("detalhe-produto")
-    if (area === null) {
-        return
-    }
-
+const detalheProduto = document.getElementById("detalhe-produto")
+if (detalheProduto !== null) {
     //lê o número que vem depois de "?id=" no endereço da página
-    const parametros = new URLSearchParams(window.location.search)
-    const id = Number(parametros.get("id"))
+    const id = Number(new URLSearchParams(window.location.search).get("id"))
     const produto = buscarProduto(id)
 
-    area.innerHTML = ""
     if (produto === null) {
-        const mensagem = document.createElement("p")
-        mensagem.textContent = "Produto não encontrado."
-        area.appendChild(mensagem)
-        return
+        detalheProduto.innerHTML = "<p>Produto não encontrado.</p>"
+    } else {
+        //a página do produto fica com a cor do nível dele
+        nivelAtual = produto.nivel
+        aplicarTema()
+        document.title = produto.nome + " | Backstore"
+
+        detalheProduto.innerHTML = `
+            <img src="${produto.imagem}" alt="${produto.nome}">
+            <h1>${produto.nome}</h1>
+            <p class="detalhe-nivel">${buscarNivel(produto.nivel).nome}</p>
+            <p class="detalhe-descricao">${produto.descricao}</p>
+            <p class="detalhe-preco">${formatarPreco(produto.preco)}</p>
+            <p class="detalhe-estoque">${produto.estoque} unidades em estoque</p>
+            <button class="detalhe-botao">Adicionar ao carrinho</button>
+            <a href="index.html">← Voltar para a loja</a>`
+        detalheProduto.querySelector("button").addEventListener("click", function () {
+            mudarQuantidade(produto.id, 1)
+        })
     }
-
-    //a página do produto fica com a cor do nível dele
-    nivelAtual = produto.nivel
-    aplicarTema()
-    document.title = produto.nome + " | Backstore"
-
-    const imagem = document.createElement("img")
-    imagem.src = produto.imagem
-    imagem.alt = produto.nome
-
-    const nome = document.createElement("h1")
-    nome.textContent = produto.nome
-
-    const nivel = document.createElement("p")
-    nivel.classList.add("detalhe-nivel")
-    nivel.textContent = buscarNivel(produto.nivel).nome
-
-    const descricao = document.createElement("p")
-    descricao.classList.add("detalhe-descricao")
-    descricao.textContent = produto.descricao
-
-    const preco = document.createElement("p")
-    preco.classList.add("detalhe-preco")
-    preco.textContent = formatarPreco(produto.preco)
-
-    const estoque = document.createElement("p")
-    estoque.classList.add("detalhe-estoque")
-    estoque.textContent = produto.estoque + " unidades em estoque"
-
-    const botao = document.createElement("button")
-    botao.classList.add("detalhe-botao")
-    botao.textContent = "Adicionar ao carrinho"
-    botao.addEventListener("click", function () {
-        mudarQuantidade(produto.id, 1)
-    })
-
-    const voltar = document.createElement("a")
-    voltar.href = "index.html"
-    voltar.textContent = "← Voltar para a loja"
-
-    area.appendChild(imagem)
-    area.appendChild(nome)
-    area.appendChild(nivel)
-    area.appendChild(descricao)
-    area.appendChild(preco)
-    area.appendChild(estoque)
-    area.appendChild(botao)
-    area.appendChild(voltar)
 }
-
-mostrarDetalheProduto()
 //#endregion
 
 
