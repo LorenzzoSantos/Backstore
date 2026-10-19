@@ -703,8 +703,9 @@ atualizarContador()
 
 
 //#region Cabeçalho
-//botão "Início": volta para o topo da página
+//botão "Início": volta para o tema padrão (Level 0) e para o topo da página
 function irParaInicio() {
+    escolherNivel("")
     window.scrollTo({ top: 0, behavior: "smooth" })
 }
 
@@ -773,10 +774,56 @@ function montarListaNiveis() {
         botao.textContent = niveis[i].nome
         botao.classList.add("opcao-nivel")
         botao.dataset.nivel = niveis[i].chave
+        botao.addEventListener("click", function () {
+            escolherNivel(botao.dataset.nivel)
+        })
         item.appendChild(botao)
         lista.appendChild(item)
     }
 }
 
+//nível escolhido agora ("" quer dizer nenhum, ou seja, o tema padrão do Level 0)
+let nivelAtual = ""
+
+//procura um nível pela chave
+function buscarNivel(chave) {
+    for (let i = 0; i < niveis.length; i++) {
+        if (niveis[i].chave === chave) {
+            return niveis[i]
+        }
+    }
+    return null
+}
+
+//pinta o site com a cor do nível escolhido (ou volta para o tema padrão do Level 0)
+function aplicarTema() {
+    const nivel = buscarNivel(nivelAtual)
+    if (nivel === null) {
+        document.body.removeAttribute("data-nivel")
+        document.documentElement.style.removeProperty("--cor-nivel")
+    } else {
+        document.body.dataset.nivel = nivel.chave
+        document.documentElement.style.setProperty("--cor-nivel", nivel.cor)
+    }
+}
+
+//quando a pessoa escolhe um nível na lista
+function escolherNivel(chave) {
+    nivelAtual = chave
+    localStorage.setItem("nivelBackstore", nivelAtual)
+    aplicarTema()
+    fecharListaNiveis()
+}
+
+//lembra o nível que estava escolhido (para continuar com o mesmo tema em outra página)
+function carregarNivel() {
+    const guardado = localStorage.getItem("nivelBackstore")
+    if (guardado !== null) {
+        nivelAtual = guardado
+    }
+}
+
 montarListaNiveis()
+carregarNivel()
+aplicarTema()
 //#endregion
