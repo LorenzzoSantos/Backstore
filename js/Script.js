@@ -89,23 +89,26 @@ function formatarPreco(valor) {
     return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
 }
 
-let timerDoAviso = null
+//liga o clique de um botão a uma função (se o botão existir na página)
+function aoClicar(id, funcao) {
+    const botao = document.getElementById(id)
+    if (botao !== null) {
+        botao.addEventListener("click", funcao)
+    }
+}
 
-//mostra uma mensagem no topo da tela (elemento com id="aviso") e esconde depois de alguns segundos (3 se não disser quantos)
+//mostra uma mensagem no topo da tela (id="aviso") e esconde depois de alguns segundos (3 se não disser quantos)
+let timerDoAviso = null
 function mostrarAviso(texto, segundos) {
+    const aviso = document.getElementById("aviso")
+    if (aviso === null) {
+        return
+    }
     if (segundos === undefined) {
         segundos = 3
     }
-
-    const aviso = document.getElementById("aviso")
-    if (aviso === null) {
-        console.log(texto)
-        return
-    }
-
     aviso.textContent = texto
     aviso.classList.add("visivel")
-
     clearTimeout(timerDoAviso)
     timerDoAviso = setTimeout(function () {
         aviso.classList.remove("visivel")
@@ -115,78 +118,67 @@ function mostrarAviso(texto, segundos) {
 
 
 //#region Carrinho
-//cada item do carrinho guarda o id do produto e a quantidade: { id: 35, quantidade: 2 }
-let carrinho = []
+//cada item guarda o id do produto e a quantidade: { id: 35, quantidade: 2 }
+//começa com o que estava guardado no navegador (ou vazio, se não tinha nada)
+let carrinho = JSON.parse(localStorage.getItem("carrinhoBackstore")) || []
 
-//guarda o carrinho no navegador
+//guarda o carrinho no navegador e atualiza o número do cabeçalho
 function salvarCarrinho() {
     localStorage.setItem("carrinhoBackstore", JSON.stringify(carrinho))
     atualizarContador()
 }
 
-//conta quantos itens tem no carrinho (somando as quantidades)
-function contarItens() {
+//soma as quantidades e mostra no cabeçalho (id="contador-carrinho")
+function atualizarContador() {
+    const contador = document.getElementById("contador-carrinho")
+    if (contador === null) {
+        return
+    }
     let total = 0
     for (let i = 0; i < carrinho.length; i++) {
         total = total + carrinho[i].quantidade
     }
-    return total
+    contador.textContent = total
 }
 
-//mostra o número de itens no cabeçalho, no elemento com id="contador-carrinho"
-function atualizarContador() {
-    const contador = document.getElementById("contador-carrinho")
-    if (contador !== null) {
-        contador.textContent = contarItens()
-    }
-}
+//muda a quantidade de um produto: 1 adiciona, -1 tira (se chegar a zero, sai do carrinho)
+function mudarQuantidade(id, mudanca) {
+    const produto = buscarProduto(id)
 
-//pega o carrinho que estava guardado no navegador
-function carregarCarrinho() {
-    const guardado = localStorage.getItem("carrinhoBackstore")
-    if (guardado !== null) {
-        carrinho = JSON.parse(guardado)
-    }
-}
-
-//coloca um produto no carrinho (ou aumenta a quantidade se ele já estiver lá)
-function adicionarAoCarrinho(idDesejado) {
-    const produto = buscarProduto(idDesejado)
-
-    //se o produto não existe, para aqui
-    if (produto === null) {
-        mostrarAviso("Produto não existe.")
-        return
-    }
-
-    //procura se o produto já está no carrinho
-    let itemNoCarrinho = null
+    //procura o produto no carrinho; se ainda não está, entra com quantidade 0
+    let item = null
     for (let i = 0; i < carrinho.length; i++) {
-        if (carrinho[i].id === idDesejado) {
-            itemNoCarrinho = carrinho[i]
+        if (carrinho[i].id === id) {
+            item = carrinho[i]
         }
     }
+    if (item === null) {
+        item = { id: id, quantidade: 0 }
+        carrinho.push(item)
+    }
 
-    if (itemNoCarrinho === null) {
-        //ainda não está: entra com quantidade 1
-        carrinho.push({ id: idDesejado, quantidade: 1 })
-    } else if (itemNoCarrinho.quantidade < produto.estoque) {
-        //já está: soma mais 1
-        itemNoCarrinho.quantidade++
-    } else {
+    //não deixa passar do estoque
+    if (item.quantidade + mudanca > produto.estoque) {
         mostrarAviso("Não temos mais " + produto.nome + " no estoque.")
         return
     }
 
+    item.quantidade = item.quantidade + mudanca
+    if (item.quantidade < 1) {
+        removerDoCarrinho(id)
+        return
+    }
     salvarCarrinho()
-    mostrarAviso(produto.nome + " foi adicionado à mochila!")
+    if (mudanca > 0) {
+        mostrarAviso(produto.nome + " foi adicionado à mochila!")
+    }
 }
 
-//tira um produto do carrinho
-function removerDoCarrinho(idDesejado) {
+//tira um produto do carrinho (monta um carrinho novo sem ele)
+function removerDoCarrinho(id) {
     let novoCarrinho = []
     for (let i = 0; i < carrinho.length; i++) {
-        if (carrinho[i].id !== idDesejado) {
+        if (carrinho[i].id !== id) {
             novoCarrinho.push(carrinho[i])
         }
     }
@@ -194,34 +186,6 @@ function removerDoCarrinho(idDesejado) {
     salvarCarrinho()
 }
 
-//aumenta (+1) ou diminui (-1) a quantidade de um produto no carrinho
-function mudarQuantidade(idDesejado, mudanca) {
-    const produto = buscarProduto(idDesejado)
-
-    for (let i = 0; i < carrinho.length; i++) {
-        if (carrinho[i].id === idDesejado) {
-            const novaQuantidade = carrinho[i].quantidade + mudanca
-
-            //se chegar a zero, tira do carrinho
-            if (novaQuantidade < 1) {
-                removerDoCarrinho(idDesejado)
-                return
-            }
-
-            //não deixa passar do estoque
-            if (novaQuantidade > produto.estoque) {
-                mostrarAviso("Não temos mais " + produto.nome + " no estoque.")
-                return
-            }
-
-            carrinho[i].quantidade = novaQuantidade
-            salvarCarrinho()
-            return
-        }
-    }
-}
-
-carregarCarrinho()
 atualizarContador()
 //#endregion
 
@@ -392,7 +356,7 @@ function criarCard(produto) {
     botao.classList.add("card-botao")
     botao.textContent = "Adicionar ao carrinho"
     botao.addEventListener("click", function () {
-        adicionarAoCarrinho(produto.id)
+        mudarQuantidade(produto.id, 1)
     })
 
     card.appendChild(link)
@@ -558,7 +522,7 @@ function mostrarDetalheProduto() {
     botao.classList.add("detalhe-botao")
     botao.textContent = "Adicionar ao carrinho"
     botao.addEventListener("click", function () {
-        adicionarAoCarrinho(produto.id)
+        mudarQuantidade(produto.id, 1)
     })
 
     const voltar = document.createElement("a")
