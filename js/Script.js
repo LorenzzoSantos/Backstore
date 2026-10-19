@@ -568,6 +568,25 @@ function buscarProduto(id) {
 function formatarPreco(valor) {
     return valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
 }
+
+let timerDoAviso = null
+
+//mostra uma mensagem no topo da tela (elemento com id="aviso") e esconde depois de 3 segundos
+function mostrarAviso(texto) {
+    const aviso = document.getElementById("aviso")
+    if (aviso === null) {
+        console.log(texto)
+        return
+    }
+
+    aviso.textContent = texto
+    aviso.classList.add("visivel")
+
+    clearTimeout(timerDoAviso)
+    timerDoAviso = setTimeout(function () {
+        aviso.classList.remove("visivel")
+    }, 3000)
+}
 //#endregion
 
 
@@ -612,7 +631,7 @@ function adicionarAoCarrinho(idDesejado) {
 
     //se o produto não existe, para aqui
     if (produto === null) {
-        console.log("Produto não existe.")
+        mostrarAviso("Produto não existe.")
         return
     }
 
@@ -631,12 +650,12 @@ function adicionarAoCarrinho(idDesejado) {
         //já está: soma mais 1
         itemNoCarrinho.quantidade++
     } else {
-        console.log("Não temos mais " + produto.nome + " no estoque.")
+        mostrarAviso("Não temos mais " + produto.nome + " no estoque.")
         return
     }
 
     salvarCarrinho()
-    console.log(produto.nome + " foi adicionado à mochila!")
+    mostrarAviso(produto.nome + " foi adicionado à mochila!")
 }
 
 //tira um produto do carrinho
@@ -667,7 +686,7 @@ function mudarQuantidade(idDesejado, mudanca) {
 
             //não deixa passar do estoque
             if (novaQuantidade > produto.estoque) {
-                console.log("Não temos mais " + produto.nome + " no estoque.")
+                mostrarAviso("Não temos mais " + produto.nome + " no estoque.")
                 return
             }
 
