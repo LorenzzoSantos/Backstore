@@ -706,7 +706,11 @@ atualizarContador()
 //botão "Início": volta para o tema padrão (Level 0) e para o topo da página
 function irParaInicio() {
     escolherNivel("")
-    window.scrollTo({ top: 0, behavior: "smooth" })
+    if (estaNaPaginaInicial()) {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    } else {
+        window.location.href = "index.html"
+    }
 }
 
 //botão "Sobre": desce até o rodapé, onde estão as informações do grupo
@@ -813,6 +817,13 @@ function escolherNivel(chave) {
     localStorage.setItem("nivelBackstore", nivelAtual)
     aplicarTema()
     fecharListaNiveis()
+
+    //na página inicial mostra os itens do nível; nas outras páginas, vai para a página inicial
+    if (estaNaPaginaInicial()) {
+        mostrarItensDoNivel()
+    } else if (chave !== "") {
+        window.location.href = "index.html"
+    }
 }
 
 //lembra o nível que estava escolhido (para continuar com o mesmo tema em outra página)
@@ -917,6 +928,54 @@ function mostrarConhecaNiveis() {
     }
 }
 
+//a página inicial é a única que tem a grade de produtos
+function estaNaPaginaInicial() {
+    return document.getElementById("grade-produtos") !== null
+}
+
+//mostra os 10 itens do nível escolhido (ou volta para os destaques se nenhum nível foi escolhido)
+function mostrarItensDoNivel() {
+    const grade = document.getElementById("grade-produtos")
+    const secaoNivel = document.getElementById("secao-nivel")
+    const secaoDestaques = document.getElementById("secao-destaques")
+    const titulo = document.getElementById("titulo-nivel")
+    if (grade === null) {
+        return
+    }
+
+    const nivel = buscarNivel(nivelAtual)
+
+    //nenhum nível escolhido: esconde a grade e mostra os destaques
+    if (nivel === null) {
+        if (secaoNivel !== null) {
+            secaoNivel.hidden = true
+        }
+        if (secaoDestaques !== null) {
+            secaoDestaques.hidden = false
+        }
+        return
+    }
+
+    //um nível escolhido: esconde os destaques e mostra a grade
+    if (secaoNivel !== null) {
+        secaoNivel.hidden = false
+    }
+    if (secaoDestaques !== null) {
+        secaoDestaques.hidden = true
+    }
+    if (titulo !== null) {
+        titulo.textContent = nivel.nome
+    }
+
+    grade.innerHTML = ""
+    for (let i = 0; i < catalogoBackstore.length; i++) {
+        if (catalogoBackstore[i].nivel === nivel.chave) {
+            grade.appendChild(criarCard(catalogoBackstore[i]))
+        }
+    }
+}
+
 mostrarMaisVendidos()
 mostrarConhecaNiveis()
+mostrarItensDoNivel()
 //#endregion
