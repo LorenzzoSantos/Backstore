@@ -240,14 +240,10 @@ function escolherNivel(chave) {
 if (listaNiveis !== null) {
     for (let i = 0; i < niveis.length; i++) {
         const item = document.createElement("li")
-        const botao = document.createElement("button")
-        botao.textContent = niveis[i].nome
-        botao.classList.add("opcao-nivel")
-        botao.dataset.nivel = niveis[i].chave
-        botao.addEventListener("click", function () {
-            escolherNivel(botao.dataset.nivel)
+        item.innerHTML = `<button class="opcao-nivel" data-nivel="${niveis[i].chave}">${niveis[i].nome}</button>`
+        item.querySelector("button").addEventListener("click", function () {
+            escolherNivel(niveis[i].chave)
         })
-        item.appendChild(botao)
         listaNiveis.appendChild(item)
     }
 }
@@ -288,87 +284,17 @@ aplicarTema()
 function criarCard(produto) {
     const card = document.createElement("article")
     card.classList.add("card-produto")
-
-    //desenho e nome levam para a página do produto
-    const link = document.createElement("a")
-    link.href = "produto.html?id=" + produto.id
-
-    const imagem = document.createElement("img")
-    imagem.src = produto.imagem
-    imagem.alt = produto.nome
-
-    const nome = document.createElement("h3")
-    nome.textContent = produto.nome
-
-    link.appendChild(imagem)
-    link.appendChild(nome)
-
-    const preco = document.createElement("p")
-    preco.classList.add("card-preco")
-    preco.textContent = formatarPreco(produto.preco)
-
-    const botao = document.createElement("button")
-    botao.classList.add("card-botao")
-    botao.textContent = "Adicionar ao carrinho"
-    botao.addEventListener("click", function () {
+    card.innerHTML = `
+        <a href="produto.html?id=${produto.id}">
+            <img src="${produto.imagem}" alt="${produto.nome}">
+            <h3>${produto.nome}</h3>
+        </a>
+        <p class="card-preco">${formatarPreco(produto.preco)}</p>
+        <button class="card-botao">Adicionar ao carrinho</button>`
+    card.querySelector("button").addEventListener("click", function () {
         mudarQuantidade(produto.id, 1)
     })
-
-    card.appendChild(link)
-    card.appendChild(preco)
-    card.appendChild(botao)
     return card
-}
-
-//coloca os 5 mais vendidos (um de cada nível) no elemento com id="mais-vendidos"
-function mostrarMaisVendidos() {
-    const area = document.getElementById("mais-vendidos")
-    if (area === null) {
-        return
-    }
-
-    area.innerHTML = ""
-    for (let i = 0; i < catalogoBackstore.length; i++) {
-        if (catalogoBackstore[i].maisVendido === true) {
-            area.appendChild(criarCard(catalogoBackstore[i]))
-        }
-    }
-}
-
-//coloca um card para cada nível no elemento com id="conheca-niveis"
-function mostrarConhecaNiveis() {
-    const area = document.getElementById("conheca-niveis")
-    if (area === null) {
-        return
-    }
-
-    area.innerHTML = ""
-    for (let i = 0; i < niveis.length; i++) {
-        const nivel = niveis[i]
-
-        const card = document.createElement("article")
-        card.classList.add("card-nivel")
-        card.dataset.nivel = nivel.chave
-        card.style.setProperty("--cor-card", nivel.cor)
-
-        const titulo = document.createElement("h3")
-        titulo.textContent = nivel.nome
-
-        const descricao = document.createElement("p")
-        descricao.textContent = nivel.descricao
-
-        const botao = document.createElement("button")
-        botao.textContent = "Ver itens"
-        botao.addEventListener("click", function () {
-            escolherNivel(nivel.chave)
-            window.scrollTo({ top: 0, behavior: "smooth" })
-        })
-
-        card.appendChild(titulo)
-        card.appendChild(descricao)
-        card.appendChild(botao)
-        area.appendChild(card)
-    }
 }
 
 //a página inicial é a única que tem a grade de produtos
@@ -376,40 +302,17 @@ function estaNaPaginaInicial() {
     return document.getElementById("grade-produtos") !== null
 }
 
-//mostra os 10 itens do nível escolhido (ou volta para os destaques se nenhum nível foi escolhido)
+//mostra os 10 itens do nível escolhido (ou os destaques, se nenhum nível foi escolhido)
 function mostrarItensDoNivel() {
-    const grade = document.getElementById("grade-produtos")
-    const secaoNivel = document.getElementById("secao-nivel")
-    const secaoDestaques = document.getElementById("secao-destaques")
-    const titulo = document.getElementById("titulo-nivel")
-    if (grade === null) {
-        return
-    }
-
     const nivel = buscarNivel(nivelAtual)
-
-    //nenhum nível escolhido: esconde a grade e mostra os destaques
+    document.getElementById("secao-nivel").hidden = (nivel === null)
+    document.getElementById("secao-destaques").hidden = (nivel !== null)
     if (nivel === null) {
-        if (secaoNivel !== null) {
-            secaoNivel.hidden = true
-        }
-        if (secaoDestaques !== null) {
-            secaoDestaques.hidden = false
-        }
         return
     }
 
-    //um nível escolhido: esconde os destaques e mostra a grade
-    if (secaoNivel !== null) {
-        secaoNivel.hidden = false
-    }
-    if (secaoDestaques !== null) {
-        secaoDestaques.hidden = true
-    }
-    if (titulo !== null) {
-        titulo.textContent = nivel.nome
-    }
-
+    document.getElementById("titulo-nivel").textContent = nivel.nome
+    const grade = document.getElementById("grade-produtos")
     grade.innerHTML = ""
     for (let i = 0; i < catalogoBackstore.length; i++) {
         if (catalogoBackstore[i].nivel === nivel.chave) {
@@ -418,9 +321,35 @@ function mostrarItensDoNivel() {
     }
 }
 
-mostrarMaisVendidos()
-mostrarConhecaNiveis()
-mostrarItensDoNivel()
+if (estaNaPaginaInicial()) {
+    //os 5 mais vendidos (um de cada nível)
+    const maisVendidos = document.getElementById("mais-vendidos")
+    for (let i = 0; i < catalogoBackstore.length; i++) {
+        if (catalogoBackstore[i].maisVendido === true) {
+            maisVendidos.appendChild(criarCard(catalogoBackstore[i]))
+        }
+    }
+
+    //um card para cada nível em "Conheça os níveis"
+    const conhecaNiveis = document.getElementById("conheca-niveis")
+    for (let i = 0; i < niveis.length; i++) {
+        const card = document.createElement("article")
+        card.classList.add("card-nivel")
+        card.dataset.nivel = niveis[i].chave
+        card.style.setProperty("--cor-card", niveis[i].cor)
+        card.innerHTML = `
+            <h3>${niveis[i].nome}</h3>
+            <p>${niveis[i].descricao}</p>
+            <button>Ver itens</button>`
+        card.querySelector("button").addEventListener("click", function () {
+            escolherNivel(niveis[i].chave)
+            window.scrollTo({ top: 0, behavior: "smooth" })
+        })
+        conhecaNiveis.appendChild(card)
+    }
+
+    mostrarItensDoNivel()
+}
 //#endregion
 
 
