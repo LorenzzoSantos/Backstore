@@ -827,3 +827,42 @@ montarListaNiveis()
 carregarNivel()
 aplicarTema()
 //#endregion
+
+
+//#region Página inicial
+//cria o card de um produto (desenho, nome, preço e botão de adicionar)
+function criarCard(produto) {
+    const card = document.createElement("article")
+    card.classList.add("card-produto")
+
+    //desenho e nome levam para a página do produto
+    const link = document.createElement("a")
+    link.href = "produto.html?id=" + produto.id
+
+    const imagem = document.createElement("img")
+    imagem.src = produto.imagem
+    imagem.alt = produto.nome
+
+    const nome = document.createElement("h3")
+    nome.textContent = produto.nome
+
+    link.appendChild(imagem)
+    link.appendChild(nome)
+
+    const preco = document.createElement("p")
+    preco.classList.add("card-preco")
+    preco.textContent = formatarPreco(produto.preco)
+
+    const botao = document.createElement("button")
+    botao.classList.add("card-botao")
+    botao.textContent = "Adicionar ao carrinho"
+    botao.addEventListener("click", function () {
+        adicionarAoCarrinho(produto.id)
+    })
+
+    card.appendChild(link)
+    card.appendChild(preco)
+    card.appendChild(botao)
+    return card
+}
+//#endregion
