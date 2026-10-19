@@ -726,4 +726,36 @@ const botaoSobre = document.getElementById("botao-sobre")
 if (botaoSobre !== null) {
     botaoSobre.addEventListener("click", irParaSobre)
 }
+
+//abre e fecha a lista de níveis (embaixo do botão "Níveis")
+function alternarListaNiveis() {
+    const lista = document.getElementById("lista-niveis")
+    if (lista !== null) {
+        lista.classList.toggle("aberta")
+    }
+}
+
+//fecha a lista de níveis
+function fecharListaNiveis() {
+    const lista = document.getElementById("lista-niveis")
+    if (lista !== null) {
+        lista.classList.remove("aberta")
+    }
+}
+
+const botaoNiveis = document.getElementById("botao-niveis")
+if (botaoNiveis !== null) {
+    botaoNiveis.addEventListener("click", alternarListaNiveis)
+}
+
+//clicar em qualquer lugar fora do botão e da lista fecha a lista
+document.addEventListener("click", function (evento) {
+    const lista = document.getElementById("lista-niveis")
+    if (botaoNiveis === null || lista === null) {
+        return
+    }
+    if (!botaoNiveis.contains(evento.target) && !lista.contains(evento.target)) {
+        fecharListaNiveis()
+    }
+})
 //#endregion
