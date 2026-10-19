@@ -1056,6 +1056,26 @@ mostrarDetalheProduto()
 
 
 //#region Página do carrinho
+//soma o preço de todos os itens do carrinho
+function calcularTotal() {
+    let total = 0
+    for (let i = 0; i < carrinho.length; i++) {
+        const produto = buscarProduto(carrinho[i].id)
+        if (produto !== null) {
+            total = total + produto.preco * carrinho[i].quantidade
+        }
+    }
+    return total
+}
+
+//mostra o total no elemento com id="total-carrinho"
+function mostrarTotal() {
+    const areaTotal = document.getElementById("total-carrinho")
+    if (areaTotal !== null) {
+        areaTotal.textContent = "Total: " + formatarPreco(calcularTotal())
+    }
+}
+
 //mostra os itens do carrinho no elemento com id="lista-carrinho"
 function mostrarCarrinho() {
     const lista = document.getElementById("lista-carrinho")
@@ -1064,6 +1084,7 @@ function mostrarCarrinho() {
     }
 
     lista.innerHTML = ""
+    mostrarTotal()
 
     if (carrinho.length === 0) {
         const vazio = document.createElement("p")
