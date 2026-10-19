@@ -399,32 +399,20 @@ function calcularTotal() {
     return total
 }
 
-//mostra o total no elemento com id="total-carrinho"
-function mostrarTotal() {
-    const areaTotal = document.getElementById("total-carrinho")
-    if (areaTotal !== null) {
-        areaTotal.textContent = "Total: " + formatarPreco(calcularTotal())
-    }
-}
-
-//mostra os itens do carrinho no elemento com id="lista-carrinho"
+//mostra os itens e o total (só na página do carrinho, que tem id="lista-carrinho")
 function mostrarCarrinho() {
     const lista = document.getElementById("lista-carrinho")
     if (lista === null) {
         return
     }
-
-    lista.innerHTML = ""
-    mostrarTotal()
+    document.getElementById("total-carrinho").textContent = "Total: " + formatarPreco(calcularTotal())
 
     if (carrinho.length === 0) {
-        const vazio = document.createElement("p")
-        vazio.classList.add("carrinho-vazio")
-        vazio.textContent = "Seu carrinho está vazio."
-        lista.appendChild(vazio)
+        lista.innerHTML = `<p class="carrinho-vazio">Seu carrinho está vazio.</p>`
         return
     }
 
+    lista.innerHTML = ""
     for (let i = 0; i < carrinho.length; i++) {
         const item = carrinho[i]
         const produto = buscarProduto(item.id)
@@ -434,63 +422,35 @@ function mostrarCarrinho() {
 
         const linha = document.createElement("article")
         linha.classList.add("item-carrinho")
+        linha.innerHTML = `
+            <img src="${produto.imagem}" alt="${produto.nome}">
+            <a href="produto.html?id=${produto.id}">${produto.nome}</a>
+            <p class="item-preco">${formatarPreco(produto.preco)}</p>
+            <button class="item-menos">−</button>
+            <span class="item-quantidade">${item.quantidade}</span>
+            <button class="item-mais">+</button>
+            <p class="item-subtotal">${formatarPreco(produto.preco * item.quantidade)}</p>
+            <button class="item-remover">Remover</button>`
 
-        const imagem = document.createElement("img")
-        imagem.src = produto.imagem
-        imagem.alt = produto.nome
-
-        const nome = document.createElement("a")
-        nome.href = "produto.html?id=" + produto.id
-        nome.textContent = produto.nome
-
-        const preco = document.createElement("p")
-        preco.classList.add("item-preco")
-        preco.textContent = formatarPreco(produto.preco)
-
-        const menos = document.createElement("button")
-        menos.textContent = "−"
-        menos.addEventListener("click", function () {
+        //cada botão muda o carrinho e desenha a lista de novo
+        linha.querySelector(".item-menos").addEventListener("click", function () {
             mudarQuantidade(produto.id, -1)
             mostrarCarrinho()
         })
-
-        const quantidade = document.createElement("span")
-        quantidade.classList.add("item-quantidade")
-        quantidade.textContent = item.quantidade
-
-        const mais = document.createElement("button")
-        mais.textContent = "+"
-        mais.addEventListener("click", function () {
+        linha.querySelector(".item-mais").addEventListener("click", function () {
             mudarQuantidade(produto.id, 1)
             mostrarCarrinho()
         })
-
-        const subtotal = document.createElement("p")
-        subtotal.classList.add("item-subtotal")
-        subtotal.textContent = formatarPreco(produto.preco * item.quantidade)
-
-        const remover = document.createElement("button")
-        remover.classList.add("item-remover")
-        remover.textContent = "Remover"
-        remover.addEventListener("click", function () {
+        linha.querySelector(".item-remover").addEventListener("click", function () {
             removerDoCarrinho(produto.id)
             mostrarCarrinho()
         })
-
-        linha.appendChild(imagem)
-        linha.appendChild(nome)
-        linha.appendChild(preco)
-        linha.appendChild(menos)
-        linha.appendChild(quantidade)
-        linha.appendChild(mais)
-        linha.appendChild(subtotal)
-        linha.appendChild(remover)
         lista.appendChild(linha)
     }
 }
 
 //botão "Comprar": mostra o que foi comprado e esvazia o carrinho
-function finalizarCompra() {
+aoClicar("botao-comprar", function () {
     if (carrinho.length === 0) {
         mostrarAviso("Seu carrinho está vazio.")
         return
@@ -504,7 +464,6 @@ function finalizarCompra() {
             itensComprados.push(carrinho[i].quantidade + "x " + produto.nome)
         }
     }
-
     const mensagem = "Você comprou: " + itensComprados.join(", ") + ". Total: " + formatarPreco(calcularTotal()) + ". Obrigado por comprar na Backstore!"
 
     //esvazia o carrinho
@@ -514,12 +473,7 @@ function finalizarCompra() {
 
     mostrarAviso(mensagem, 8)
     window.scrollTo({ top: 0, behavior: "smooth" })
-}
-
-const botaoComprar = document.getElementById("botao-comprar")
-if (botaoComprar !== null) {
-    botaoComprar.addEventListener("click", finalizarCompra)
-}
+})
 
 mostrarCarrinho()
 //#endregion
