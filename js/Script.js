@@ -621,5 +621,44 @@ function adicionarAoCarrinho(idDesejado) {
     console.log(produto.nome + " foi adicionado à mochila!")
 }
 
+//tira um produto do carrinho
+function removerDoCarrinho(idDesejado) {
+    let novoCarrinho = []
+    for (let i = 0; i < carrinho.length; i++) {
+        if (carrinho[i].id !== idDesejado) {
+            novoCarrinho.push(carrinho[i])
+        }
+    }
+    carrinho = novoCarrinho
+    salvarCarrinho()
+}
+
+//aumenta (+1) ou diminui (-1) a quantidade de um produto no carrinho
+function mudarQuantidade(idDesejado, mudanca) {
+    const produto = buscarProduto(idDesejado)
+
+    for (let i = 0; i < carrinho.length; i++) {
+        if (carrinho[i].id === idDesejado) {
+            const novaQuantidade = carrinho[i].quantidade + mudanca
+
+            //se chegar a zero, tira do carrinho
+            if (novaQuantidade < 1) {
+                removerDoCarrinho(idDesejado)
+                return
+            }
+
+            //não deixa passar do estoque
+            if (novaQuantidade > produto.estoque) {
+                console.log("Não temos mais " + produto.nome + " no estoque.")
+                return
+            }
+
+            carrinho[i].quantidade = novaQuantidade
+            salvarCarrinho()
+            return
+        }
+    }
+}
+
 carregarCarrinho()
 //#endregion
