@@ -865,4 +865,21 @@ function criarCard(produto) {
     card.appendChild(botao)
     return card
 }
+
+//coloca os 5 mais vendidos (um de cada nível) no elemento com id="mais-vendidos"
+function mostrarMaisVendidos() {
+    const area = document.getElementById("mais-vendidos")
+    if (area === null) {
+        return
+    }
+
+    area.innerHTML = ""
+    for (let i = 0; i < catalogoBackstore.length; i++) {
+        if (catalogoBackstore[i].maisVendido === true) {
+            area.appendChild(criarCard(catalogoBackstore[i]))
+        }
+    }
+}
+
+mostrarMaisVendidos()
 //#endregion
