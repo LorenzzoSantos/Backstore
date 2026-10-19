@@ -1053,3 +1053,89 @@ function mostrarDetalheProduto() {
 
 mostrarDetalheProduto()
 //#endregion
+
+
+//#region Página do carrinho
+//mostra os itens do carrinho no elemento com id="lista-carrinho"
+function mostrarCarrinho() {
+    const lista = document.getElementById("lista-carrinho")
+    if (lista === null) {
+        return
+    }
+
+    lista.innerHTML = ""
+
+    if (carrinho.length === 0) {
+        const vazio = document.createElement("p")
+        vazio.classList.add("carrinho-vazio")
+        vazio.textContent = "Seu carrinho está vazio."
+        lista.appendChild(vazio)
+        return
+    }
+
+    for (let i = 0; i < carrinho.length; i++) {
+        const item = carrinho[i]
+        const produto = buscarProduto(item.id)
+        if (produto === null) {
+            continue
+        }
+
+        const linha = document.createElement("article")
+        linha.classList.add("item-carrinho")
+
+        const imagem = document.createElement("img")
+        imagem.src = produto.imagem
+        imagem.alt = produto.nome
+
+        const nome = document.createElement("a")
+        nome.href = "produto.html?id=" + produto.id
+        nome.textContent = produto.nome
+
+        const preco = document.createElement("p")
+        preco.classList.add("item-preco")
+        preco.textContent = formatarPreco(produto.preco)
+
+        const menos = document.createElement("button")
+        menos.textContent = "−"
+        menos.addEventListener("click", function () {
+            mudarQuantidade(produto.id, -1)
+            mostrarCarrinho()
+        })
+
+        const quantidade = document.createElement("span")
+        quantidade.classList.add("item-quantidade")
+        quantidade.textContent = item.quantidade
+
+        const mais = document.createElement("button")
+        mais.textContent = "+"
+        mais.addEventListener("click", function () {
+            mudarQuantidade(produto.id, 1)
+            mostrarCarrinho()
+        })
+
+        const subtotal = document.createElement("p")
+        subtotal.classList.add("item-subtotal")
+        subtotal.textContent = formatarPreco(produto.preco * item.quantidade)
+
+        const remover = document.createElement("button")
+        remover.classList.add("item-remover")
+        remover.textContent = "Remover"
+        remover.addEventListener("click", function () {
+            removerDoCarrinho(produto.id)
+            mostrarCarrinho()
+        })
+
+        linha.appendChild(imagem)
+        linha.appendChild(nome)
+        linha.appendChild(preco)
+        linha.appendChild(menos)
+        linha.appendChild(quantidade)
+        linha.appendChild(mais)
+        linha.appendChild(subtotal)
+        linha.appendChild(remover)
+        lista.appendChild(linha)
+    }
+}
+
+mostrarCarrinho()
+//#endregion
