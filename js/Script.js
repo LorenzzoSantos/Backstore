@@ -700,3 +700,30 @@ function mudarQuantidade(idDesejado, mudanca) {
 carregarCarrinho()
 atualizarContador()
 //#endregion
+
+
+//#region Cabeçalho
+//botão "Início": volta para o topo da página
+function irParaInicio() {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+}
+
+//botão "Sobre": desce até o rodapé, onde estão as informações do grupo
+function irParaSobre() {
+    const rodape = document.querySelector("footer")
+    if (rodape !== null) {
+        rodape.scrollIntoView({ behavior: "smooth" })
+    }
+}
+
+//liga cada botão à sua função
+const botaoInicio = document.getElementById("botao-inicio")
+if (botaoInicio !== null) {
+    botaoInicio.addEventListener("click", irParaInicio)
+}
+
+const botaoSobre = document.getElementById("botao-sobre")
+if (botaoSobre !== null) {
+    botaoSobre.addEventListener("click", irParaSobre)
+}
+//#endregion
