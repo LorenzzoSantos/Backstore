@@ -578,6 +578,24 @@ let carrinho = []
 //guarda o carrinho no navegador
 function salvarCarrinho() {
     localStorage.setItem("carrinhoBackstore", JSON.stringify(carrinho))
+    atualizarContador()
+}
+
+//conta quantos itens tem no carrinho (somando as quantidades)
+function contarItens() {
+    let total = 0
+    for (let i = 0; i < carrinho.length; i++) {
+        total = total + carrinho[i].quantidade
+    }
+    return total
+}
+
+//mostra o número de itens no cabeçalho, no elemento com id="contador-carrinho"
+function atualizarContador() {
+    const contador = document.getElementById("contador-carrinho")
+    if (contador !== null) {
+        contador.textContent = contarItens()
+    }
 }
 
 //pega o carrinho que estava guardado no navegador
@@ -661,4 +679,5 @@ function mudarQuantidade(idDesejado, mudanca) {
 }
 
 carregarCarrinho()
+atualizarContador()
 //#endregion
