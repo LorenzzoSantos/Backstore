@@ -758,4 +758,25 @@ document.addEventListener("click", function (evento) {
         fecharListaNiveis()
     }
 })
+
+//coloca os 5 níveis dentro da lista do cabeçalho
+function montarListaNiveis() {
+    const lista = document.getElementById("lista-niveis")
+    if (lista === null) {
+        return
+    }
+
+    lista.innerHTML = ""
+    for (let i = 0; i < niveis.length; i++) {
+        const item = document.createElement("li")
+        const botao = document.createElement("button")
+        botao.textContent = niveis[i].nome
+        botao.classList.add("opcao-nivel")
+        botao.dataset.nivel = niveis[i].chave
+        item.appendChild(botao)
+        lista.appendChild(item)
+    }
+}
+
+montarListaNiveis()
 //#endregion
