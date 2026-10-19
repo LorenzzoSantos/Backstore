@@ -881,5 +881,42 @@ function mostrarMaisVendidos() {
     }
 }
 
+//coloca um card para cada nível no elemento com id="conheca-niveis"
+function mostrarConhecaNiveis() {
+    const area = document.getElementById("conheca-niveis")
+    if (area === null) {
+        return
+    }
+
+    area.innerHTML = ""
+    for (let i = 0; i < niveis.length; i++) {
+        const nivel = niveis[i]
+
+        const card = document.createElement("article")
+        card.classList.add("card-nivel")
+        card.dataset.nivel = nivel.chave
+        card.style.setProperty("--cor-card", nivel.cor)
+
+        const titulo = document.createElement("h3")
+        titulo.textContent = nivel.nome
+
+        const descricao = document.createElement("p")
+        descricao.textContent = nivel.descricao
+
+        const botao = document.createElement("button")
+        botao.textContent = "Ver itens"
+        botao.addEventListener("click", function () {
+            escolherNivel(nivel.chave)
+            window.scrollTo({ top: 0, behavior: "smooth" })
+        })
+
+        card.appendChild(titulo)
+        card.appendChild(descricao)
+        card.appendChild(botao)
+        area.appendChild(card)
+    }
+}
+
 mostrarMaisVendidos()
+mostrarConhecaNiveis()
 //#endregion
