@@ -191,91 +191,11 @@ atualizarContador()
 
 
 //#region Cabeçalho
-//botão "Início": volta para o tema padrão (Level 0) e para o topo da página
-function irParaInicio() {
-    escolherNivel("")
-    if (estaNaPaginaInicial()) {
-        window.scrollTo({ top: 0, behavior: "smooth" })
-    } else {
-        window.location.href = "index.html"
-    }
-}
-
-//botão "Sobre": desce até o rodapé, onde estão as informações do grupo
-function irParaSobre() {
-    const rodape = document.querySelector("footer")
-    if (rodape !== null) {
-        rodape.scrollIntoView({ behavior: "smooth" })
-    }
-}
-
-//liga cada botão à sua função
-const botaoInicio = document.getElementById("botao-inicio")
-if (botaoInicio !== null) {
-    botaoInicio.addEventListener("click", irParaInicio)
-}
-
-const botaoSobre = document.getElementById("botao-sobre")
-if (botaoSobre !== null) {
-    botaoSobre.addEventListener("click", irParaSobre)
-}
-
-//abre e fecha a lista de níveis (embaixo do botão "Níveis")
-function alternarListaNiveis() {
-    const lista = document.getElementById("lista-niveis")
-    if (lista !== null) {
-        lista.classList.toggle("aberta")
-    }
-}
-
-//fecha a lista de níveis
-function fecharListaNiveis() {
-    const lista = document.getElementById("lista-niveis")
-    if (lista !== null) {
-        lista.classList.remove("aberta")
-    }
-}
-
 const botaoNiveis = document.getElementById("botao-niveis")
-if (botaoNiveis !== null) {
-    botaoNiveis.addEventListener("click", alternarListaNiveis)
-}
+const listaNiveis = document.getElementById("lista-niveis")
 
-//clicar em qualquer lugar fora do botão e da lista fecha a lista
-document.addEventListener("click", function (evento) {
-    const lista = document.getElementById("lista-niveis")
-    if (botaoNiveis === null || lista === null) {
-        return
-    }
-    if (!botaoNiveis.contains(evento.target) && !lista.contains(evento.target)) {
-        fecharListaNiveis()
-    }
-})
-
-//coloca os 5 níveis dentro da lista do cabeçalho
-function montarListaNiveis() {
-    const lista = document.getElementById("lista-niveis")
-    if (lista === null) {
-        return
-    }
-
-    lista.innerHTML = ""
-    for (let i = 0; i < niveis.length; i++) {
-        const item = document.createElement("li")
-        const botao = document.createElement("button")
-        botao.textContent = niveis[i].nome
-        botao.classList.add("opcao-nivel")
-        botao.dataset.nivel = niveis[i].chave
-        botao.addEventListener("click", function () {
-            escolherNivel(botao.dataset.nivel)
-        })
-        item.appendChild(botao)
-        lista.appendChild(item)
-    }
-}
-
-//nível escolhido agora ("" quer dizer nenhum, ou seja, o tema padrão do Level 0)
-let nivelAtual = ""
+//nível escolhido agora ("" = nenhum, ou seja, o tema padrão do Level 0); começa com o que estava guardado
+let nivelAtual = localStorage.getItem("nivelBackstore") || ""
 
 //procura um nível pela chave
 function buscarNivel(chave) {
@@ -299,12 +219,14 @@ function aplicarTema() {
     }
 }
 
-//quando a pessoa escolhe um nível na lista
+//quando a pessoa escolhe um nível: guarda, pinta o site e fecha a lista
 function escolherNivel(chave) {
     nivelAtual = chave
     localStorage.setItem("nivelBackstore", nivelAtual)
     aplicarTema()
-    fecharListaNiveis()
+    if (listaNiveis !== null) {
+        listaNiveis.classList.remove("aberta")
+    }
 
     //na página inicial mostra os itens do nível; nas outras páginas, vai para a página inicial
     if (estaNaPaginaInicial()) {
@@ -314,16 +236,49 @@ function escolherNivel(chave) {
     }
 }
 
-//lembra o nível que estava escolhido (para continuar com o mesmo tema em outra página)
-function carregarNivel() {
-    const guardado = localStorage.getItem("nivelBackstore")
-    if (guardado !== null) {
-        nivelAtual = guardado
+//coloca os 5 níveis dentro da lista do cabeçalho
+if (listaNiveis !== null) {
+    for (let i = 0; i < niveis.length; i++) {
+        const item = document.createElement("li")
+        const botao = document.createElement("button")
+        botao.textContent = niveis[i].nome
+        botao.classList.add("opcao-nivel")
+        botao.dataset.nivel = niveis[i].chave
+        botao.addEventListener("click", function () {
+            escolherNivel(botao.dataset.nivel)
+        })
+        item.appendChild(botao)
+        listaNiveis.appendChild(item)
     }
 }
 
-montarListaNiveis()
-carregarNivel()
+//clicar no botão "Níveis" abre e fecha a lista; clicar fora dela fecha
+document.addEventListener("click", function (evento) {
+    if (botaoNiveis === null || listaNiveis === null) {
+        return
+    }
+    if (botaoNiveis.contains(evento.target)) {
+        listaNiveis.classList.toggle("aberta")
+    } else if (!listaNiveis.contains(evento.target)) {
+        listaNiveis.classList.remove("aberta")
+    }
+})
+
+//botão "Início": volta para o tema padrão e para o topo (nas outras páginas, vai para a página inicial)
+aoClicar("botao-inicio", function () {
+    escolherNivel("")
+    if (estaNaPaginaInicial()) {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    } else {
+        window.location.href = "index.html"
+    }
+})
+
+//botão "Sobre": desce até o rodapé, onde estão as informações do grupo
+aoClicar("botao-sobre", function () {
+    document.querySelector("footer").scrollIntoView({ behavior: "smooth" })
+})
+
 aplicarTema()
 //#endregion
 
