@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8", initial-scale="1.0">
     <title>Backstore</title>
+    <link rel="stylesheet" href="css/Style.css">
+    <!-- CSS provisório só pra testar o JavaScript. Apagar esta linha quando o Style.css estiver pronto -->
+    <link rel="stylesheet" href="css/provisorio.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <!-- Mensagens do site ("foi adicionado à mochila!", "Você comprou...") -->
+    <div id="aviso"></div>
+
+    <header>
+        <button id="botao-inicio">Início</button>
+        <button id="botao-sobre">Sobre</button>
+        <button id="botao-niveis">Níveis</button>
+        <!-- O JavaScript coloca os níveis aqui dentro -->
+        <ul id="lista-niveis"></ul>
+        <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+    </header>
+
+    <main>
+        <!-- Aparece quando nenhum nível foi escolhido. O banner entra aqui no começo depois -->
+        <section id="secao-destaques">
+            <h2>Mais vendidos</h2>
+            <div id="mais-vendidos"></div>
+
+            <h2>Conheça os níveis</h2>
+            <div id="conheca-niveis"></div>
+        </section>
+
+        <!-- Aparece quando um nível é escolhido -->
+        <section id="secao-nivel" hidden>
+            <h2 id="titulo-nivel"></h2>
+            <div id="grade-produtos"></div>
+        </section>
+    </main>
+
     <footer>
         <!-- Deixar isso aqui pra esquerda do footer-->
         <div id="Copyright" class="Copyright">
@@ -33,5 +63,7 @@
             <p>Leonardo Bevonesi</p>
         </div>
     </footer>
+
+    <script src="js/Script.js"></script>
 </body>
 </html>
