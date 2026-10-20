@@ -2,12 +2,9 @@
 
 O que o JavaScript precisa do HTML e do CSS pra funcionar.
 
-- [Lorenzzo: a parte do HTML](#lorenzzo-a-parte-do-html)
-- [Pedro: a parte do CSS](#pedro-a-parte-do-css)
-
 ---
 
-## Lorenzzo: a parte do HTML
+## Lorenzzo:
 
 Já tem uma base pronta pra gente conseguir testar o JS:
 
@@ -48,7 +45,7 @@ A linha do `meta` lá no começo do index tá com uma vírgula a mais. O certo s
 
 ---
 
-## Pedro: a parte do CSS
+## Pedro: //odeio roscax gulosas
 
 ### 1. Duas coisas que precisam ficar escondidas
 
