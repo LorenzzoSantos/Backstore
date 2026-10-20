@@ -464,16 +464,4 @@ aoClicar("botao-comprar", function () {
             itensComprados.push(carrinho[i].quantidade + "x " + produto.nome)
         }
     }
-    const mensagem = "Você comprou: " + itensComprados.join(", ") + ". Total: " + formatarPreco(calcularTotal()) + ". Obrigado por comprar na Backstore!"
-
-    //esvazia o carrinho
-    carrinho = []
-    salvarCarrinho()
-    mostrarCarrinho()
-
-    mostrarAviso(mensagem, 8)
-    window.scrollTo({ top: 0, behavior: "smooth" })
-})
-
-mostrarCarrinho()
-//#endregion
+    const mensagem = "Você comprou: " + it
