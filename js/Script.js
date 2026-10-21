@@ -464,4 +464,15 @@ aoClicar("botao-comprar", function () {
             itensComprados.push(carrinho[i].quantidade + "x " + produto.nome)
         }
     }
-    const mensagem = "Você comprou: " + it
+    const mensagem = "Você comprou: " + itensComprados.join(", ")
+    mostrarAviso(mensagem, 5)
+
+    //esvazia o carrinho e desenha a página de novo
+    carrinho = []
+    salvarCarrinho()
+    mostrarCarrinho()
+})
+
+//desenha o carrinho quando a página abre
+mostrarCarrinho()
+//#endregion
