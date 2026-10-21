@@ -1,99 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Backstore</title>
-    <link rel="stylesheet" href="css/Style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/Style.css" />
+  </head>
+  <body>
     <!-- Mensagens do site ("foi adicionado à mochila!", "Você comprou...") -->
     <div id="aviso"></div>
 
     <header>
-        <button class="btn botao-inicio" id="botao-inicio">Início</button>
-        <button class="btn botao-sobre" id="botao-sobre">Sobre</button>
-        <div class="menu-niveis">
-            <button class="btn botao-niveis" id="botao-niveis">Níveis</button>
-            <!-- O JavaScript coloca os níveis aqui dentro -->
-            <ul id="lista-niveis"></ul>
-        </div>
-        <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+      <button class="btn botao-inicio" id="botao-inicio">Início</button>
+      <button class="btn botao-sobre" id="botao-sobre">Sobre</button>
+      <div class="menu-niveis">
+        <button class="btn botao-niveis" id="botao-niveis">Níveis</button>
+        <!-- O JavaScript coloca os níveis aqui dentro -->
+        <ul id="lista-niveis"></ul>
+      </div>
+      <a href="carrinho.html"
+        >Carrinho (<span id="contador-carrinho">0</span>)</a
+      >
     </header>
 
     <main>
-        <!-- Aparece quando nenhum nível foi escolhido. O banner entra aqui no começo depois -->
-        <section id="secao-destaques">
-            <h2>Mais vendidos</h2>
-            <div id="mais-vendidos"></div>
+      <!-- Aparece quando nenhum nível foi escolhido. O banner entra aqui no começo depois -->
+      <section id="secao-destaques">
+        <h2>Mais vendidos</h2>
+        <div id="mais-vendidos"></div>
 
-            <h2>Conheça os níveis</h2>
-            <div id="conheca-niveis"></div>
-        </section>
+        <h2>Conheça os níveis</h2>
+        <div id="conheca-niveis"></div>
+      </section>
 
-        <!-- Aparece quando um nível é escolhido -->
-        <section id="secao-nivel" hidden>
-            <h2 id="titulo-nivel"></h2>
-            <div id="grade-produtos"></div>
-            
-        </section>
+      <!-- Aparece quando um nível é escolhido -->
+      <section id="secao-nivel" hidden>
+        <h2 id="titulo-nivel"></h2>
+        <div id="grade-produtos"></div>
+      </section>
     </main>
 
     <footer>
-        <div class="Direitos">
-            <h1 id="titulo-direitos">Direitos</h1>
+      <div class="Direitos">
+        <h1 id="titulo-direitos">Direitos</h1>
         <div id="Copyright" class="Copyright">
-            <p id="texto-direitos">© Backstore 2026.</p>
-            <p id="texto-direitos2">Todos os direitos reservados</p>
+          <p id="texto-direitos">© Backstore 2026.</p>
+          <p id="texto-direitos2">Todos os direitos reservados</p>
         </div>
-    </div>
+      </div>
 
-    <!--botoes para pessoas burras no sobre-->
-    <div class="botoespe">
-        <div id="LorePerfil" class="perfil"></div>
+      <!--botoes para pessoas burras no sobre-->
+      <div class="navpe">
+        <h1 id="titulonavpe">Navegar</h1>
+        <div class="botoespe">
+          <div id="Inicio" class="perfil">
             <a href="index.html"></a>
-        <p>Início</p>
-    </div>
-    <div id="ErlyPerfil" class="perfil">
-        <a href=""></a>
-        <p>Níveis</p>
-    </div>
-    <div id="LeoPerfil" class="perfil">
-        <a href="carrinho.html"><p>Carrinho</p></a>
-    </div>
+            <p>Início</p>
+          </div>
+        </div>
+        <div id="Niveis" class="perfil">
+          <a href=""></a>
+          <p>Níveis</p>
+        </div>
+        <div id="Carrinho" class="perfil">
+          <a href="carrinho.html"><p>Carrinho</p></a>
+        </div>
+      </div>
 
-    </div>
-
-        <div class="desenvolvimento">
-            <h1>Desenvolvido Por</h1>
+      <div class="desenvolvimento">
+        <h1>Desenvolvido Por</h1>
         <div id="redes" class="redes">
-            <!-- Fazer com display "Row Column" pra ficar cada link um em baixo do outro-->
-            <div id="LorePerfil" class="perfil">
-                <a href="https://github.com/LorenzzoSantos">
-                <img src="css/github_logo_icon_229278.webp" alt="Github do Lorenzzo" width="40px">
+          <!-- Fazer com display "Row Column" pra ficar cada link um em baixo do outro-->
+          <div id="LorePerfil" class="perfil">
+            <a href="https://github.com/LorenzzoSantos">
+              <img
+                src="css/github_logo_icon_229278.webp"
+                alt="Github do Lorenzzo"
+                width="40px"
+              />
             </a>
             <p>Lorenzzo Santos</p>
-        </div>
-        <div id="ErlyPerfil" class="perfil">
+          </div>
+          <div id="ErlyPerfil" class="perfil">
             <a href="https://github.com/PedroErly67">
-                <img src="css/github_logo_icon_229278.webp" alt="Github do Erly" width="40px">
+              <img
+                src="css/github_logo_icon_229278.webp"
+                alt="Github do Erly"
+                width="40px"
+              />
             </a>
             <p>Pedro Corrêa</p>
-        </div>
-        <div id="LeoPerfil" class="perfil">
+          </div>
+          <div id="LeoPerfil" class="perfil">
             <a href="https://github.com/leonardoconto-bot">
-                <img src="css/github_logo_icon_229278.webp" alt="Github do Leonardo" width="40px">
+              <img
+                src="css/github_logo_icon_229278.webp"
+                alt="Github do Leonardo"
+                width="40px"
+              />
             </a>
             <p>Leonardo Bevonesi</p>
+          </div>
         </div>
-    </div>
-        </div>
-
+      </div>
     </footer>
 
     <script src="js/Script.js"></script>
-</body>
+  </body>
 </html>

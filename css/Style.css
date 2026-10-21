@@ -1,335 +1,344 @@
 :root {
-    --cor-fundo: #C2B263;
-    --cor-titulo: rgb(253, 229, 164);
-    --cor-texto: #ffffff;
-    --cor-foot-head-bg: #6d5e13;
-    --btn: #8e7c21;
-    --btn-hover: #60541a;
+  --cor-fundo: #c2b263;
+  --cor-titulo: rgb(253, 229, 164);
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: #6d5e13;
+  --btn: #8e7c21;
+  --btn-hover: #60541a;
 }
 
 [data-nivel="level-1"] {
-    --cor-fundo: #C2B263;
-    --cor-titulo: rgb(253, 229, 164);
-    --cor-texto: #ffffff;
-    --cor-foot-head-bg: #6d5e13;
-    --btn: #8e7c21;
-    --btn-hover: #60541a;
+  --cor-fundo: #c2b263;
+  --cor-titulo: rgb(253, 229, 164);
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: #6d5e13;
+  --btn: #8e7c21;
+  --btn-hover: #60541a;
 }
 
 [data-nivel="level-37"] {
-    --cor-fundo: #F5F7FA;
-    --cor-titulo: #4ef1dc;
-    --cor-texto: #ffffff;
-    --cor-foot-head-bg: #219f8e;
-    --btn: #42c3b2;
-    --btn-hover: #25746a;
+  --cor-fundo: #f5f7fa;
+  --cor-titulo: #4ef1dc;
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: #219f8e;
+  --btn: #42c3b2;
+  --btn-hover: #25746a;
 }
 
 [data-nivel="level-run"] {
-    --cor-fundo: #DC2626;
-    --cor-titulo: #ffcdcd;
-    --cor-texto: #FFFFFF;
-    --cor-foot-head-bg: #990000;
-    --btn: #b31212;
-    --btn-hover: #740e0e;
+  --cor-fundo: #dc2626;
+  --cor-titulo: #ffcdcd;
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: #990000;
+  --btn: #b31212;
+  --btn-hover: #740e0e;
 }
 
 [data-nivel="level-fun"] {
-    --cor-fundo: #FACC15;
-    --cor-titulo: #ffd787;
-    --cor-texto: #FFFFFF;
-    --cor-foot-head-bg: rgb(129, 68, 4);
-    --btn: rgb(195, 101, 0);
-    --btn-hover: #bf8511;
+  --cor-fundo: #facc15;
+  --cor-titulo: #ffd787;
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: rgb(129, 68, 4);
+  --btn: rgb(195, 101, 0);
+  --btn-hover: #bf8511;
 }
 
 [data-nivel="level-4"] {
-    --cor-fundo: #D1C7BD;
-    --cor-titulo: #F1F5F9;
-    --cor-texto: #FFFFFF;
-    --cor-foot-head-bg: rgb(60, 65, 75);
-    --btn: #4A5568;
-    --btn-hover: #222833;
+  --cor-fundo: #d1c7bd;
+  --cor-titulo: #f1f5f9;
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: rgb(60, 65, 75);
+  --btn: #4a5568;
+  --btn-hover: #222833;
 }
 
 body {
-    margin: 0;
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    font-family: "Nunito", sans-serif;
+  margin: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Nunito", sans-serif;
 }
 
 main {
-    padding: 16px;
+  padding: 16px;
 }
 
-h1, h2 {
-    color: var(--cor-titulo);
+h1,
+h2 {
+  color: var(--cor-titulo);
 }
 
 /* ===== Cabeçalho ===== */
 header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px;
-    background-color: var(--cor-foot-head-bg);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background-color: var(--cor-foot-head-bg);
 }
 
 header a {
-    margin-left: auto;
-    color: var(--cor-texto);
-    font-weight: bold;
+  margin-left: auto;
+  color: var(--cor-texto);
+  font-weight: bold;
 }
 
 /* ===== Botões do cabeçalho ===== */
 .btn {
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
 .botao-inicio {
-    background-color: var(--btn);
-    width: 70px;
-    height: 40px;
+  background-color: var(--btn);
+  width: 70px;
+  height: 40px;
 }
 
 .botao-inicio:hover {
-    background-color: var(--btn-hover);
+  background-color: var(--btn-hover);
 }
 
 .botao-sobre {
-    background-color: var(--btn);
-    width: 70px;
-    height: 40px;
+  background-color: var(--btn);
+  width: 70px;
+  height: 40px;
 }
 
 .botao-sobre:hover {
-    background-color: var(--btn-hover);
+  background-color: var(--btn-hover);
 }
 
 .botao-niveis {
-    background-color: var(--btn);
-    width: 70px;
-    height: 40px;
+  background-color: var(--btn);
+  width: 70px;
+  height: 40px;
 }
 
 .botao-niveis:hover {
-    background-color: var(--btn-hover);
+  background-color: var(--btn-hover);
 }
 
 /* ===== Menu de níveis ===== */
 .menu-niveis {
-    position: relative;
+  position: relative;
 }
 
 #lista-niveis {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0px;
-    margin: 0;
-    margin-top: 8px;
-    padding: 8px;
-    list-style: none;
-    background-color: var(--cor-foot-head-bg);
-    border-radius: 12px;
-    z-index: 10;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  margin: 0;
+  margin-top: 8px;
+  padding: 8px;
+  list-style: none;
+  background-color: var(--cor-foot-head-bg);
+  border-radius: 12px;
+  z-index: 10;
 }
 
 #lista-niveis.aberta {
-    display: block;
+  display: block;
 }
 
 #lista-niveis li {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .opcao-nivel {
-    display: block;
-    width: 100%;
-    padding: 8px 12px;
-    font-family: "Nunito", sans-serif;
-    font-size: 15px;
-    font-weight: bold;
-    color: white;
-    background-color: var(--btn);
-    border: none;
-    border-radius: 8px;
-    text-align: left;
-    white-space: nowrap;
-    cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
 }
 
 .opcao-nivel:hover {
-    background-color: var(--btn-hover);
+  background-color: var(--btn-hover);
 }
 
 /* ===== Aviso no topo da tela ===== */
 #aviso {
-    display: none;
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 12px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #ffffff;
-    border-radius: 8px;
-    z-index: 20;
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  border-radius: 8px;
+  z-index: 20;
 }
 
 #aviso.visivel {
-    display: block;
+  display: block;
 }
 
 /* ===== Cards ===== */
-#mais-vendidos, #grade-produtos, #conheca-niveis {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+#mais-vendidos,
+#grade-produtos,
+#conheca-niveis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
 }
 
-.card-produto, .card-nivel {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.15);
-    
-}
-
-.card-nivel{
-    background-color: var(--btn);
-}
-
-.card-produto {
-    flex-direction: column;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-.card-produto img {
-    width: 100%;
-}
-
-.card-produto a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.card-botao, .card-nivel button {
-    margin-top: auto;
-
-    width: 120px;
-    height: 70px;
-    padding: 12spx;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: var(--cor-foot-head-bg);
-    align-self: center;
-}
-
-.card-botao:hover, .card-nivel button:hover{
-    background-color: var(--btn-hover);
+.card-produto,
+.card-nivel {
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .card-nivel {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  background-color: var(--btn);
+}
+
+.card-produto {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.card-produto img {
+  width: 100%;
+}
+
+.card-produto a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-botao,
+.card-nivel button {
+  margin-top: auto;
+
+  width: 120px;
+  height: 70px;
+  padding: 12spx;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--cor-foot-head-bg);
+  align-self: center;
+}
+
+.card-botao:hover,
+.card-nivel button:hover {
+  background-color: var(--btn-hover);
+}
+
+.card-nivel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* ===== Página do produto ===== */
 #detalhe-produto img {
-    width: 300px;
+  width: 300px;
 }
 
 /* ===== Página do carrinho ===== */
 .item-carrinho {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    padding: 8px;
-    border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .item-carrinho img {
-    width: 150px;
+  width: 150px;
 }
 
 /* ===== Rodapé ===== */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: var(--cor-foot-head-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--cor-foot-head-bg);
 }
 
 .desenvolvimento {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 
 #tituloDesenvolvido {
-    padding-right: 25px;
+  padding-right: 25px;
 }
 
 .redes {
-    padding-left: 40px;
-    display: grid;
-    grid-template-rows: repeat(4, auto);
-    grid-auto-flow: column;
-    align-items: center;
-    column-gap: 8px;
-    row-gap: 4px;
+  padding-left: 40px;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 4px;
 }
 
 .redes p {
-    margin: 0;
-    display: flex;
-    align-items: center;
+  margin: 0;
+  display: flex;
+  align-items: center;
 }
 
-#LorePerfil, #ErlyPerfil, #LeoPerfil {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 12px;
+#LorePerfil,
+#ErlyPerfil,
+#LeoPerfil {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
 }
 
-#LorePerfil a, #ErlyPerfil a, #LeoPerfil a {
-    display: flex;
+#LorePerfil a,
+#ErlyPerfil a,
+#LeoPerfil a {
+  display: flex;
 }
 
 #texto-direitos {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .Direitos {
-    display: flex;
-    flex-direction: column;
-    padding-left: 3%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 3%;
 }
 
 .Direitos h1 {
-    margin-left: 20%;
-    bottom: 40%;
+  margin-left: 20%;
+  bottom: 40%;
 }
 
 .Copyright #texto-direitos {
-    padding-left: 15%;
-    margin: 0px;
+  padding-left: 15%;
+  margin: 0px;
 }
