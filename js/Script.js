@@ -369,7 +369,7 @@ if (detalheProduto !== null) {
         aplicarTema()
         document.title = produto.nome + " | Backstore"
 
-            detalheProduto.innerHTML = `
+        detalheProduto.innerHTML = `
             <div class="detalhe-imagem">
                 <img src="${produto.imagem}" alt="${produto.nome}">
             </div>
@@ -382,6 +382,9 @@ if (detalheProduto !== null) {
                 <button class="detalhe-botao">Adicionar ao carrinho</button>
                 <a href="index.html">← Voltar para a loja</a>
             </div>`
+        detalheProduto.querySelector("button").addEventListener("click", function () {
+            mudarQuantidade(produto.id, 1)
+        })
     }
 }
 //#endregion
