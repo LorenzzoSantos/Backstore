@@ -1,0 +1,83 @@
+.item-carrinho {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.item-carrinho img {
+  width: 150px;
+}
+
+.item-carrinho a {
+  flex: 1;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.item-menos,
+.item-mais {
+  width: 36px;
+  height: 36px;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.item-menos:hover,
+.item-mais:hover {
+  background-color: var(--btn-hover);
+}
+
+.item-quantidade {
+  width: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item-remover {
+  padding: 8px 14px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--cor-foot-head-bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.item-remover:hover {
+  background-color: var(--btn-hover);
+}
+
+#total-carrinho {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#botao-comprar {
+  padding: 14px 32px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#botao-comprar:hover {
+  background-color: var(--btn-hover);
+}

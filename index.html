@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -10,22 +10,26 @@
       rel="stylesheet"
     />
     <title>Backstore</title>
-    <link rel="stylesheet" href="css/Style.css" />
+    <link rel="stylesheet" href="css/geral.css" />
+    <link rel="stylesheet" href="css/niveis.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
   </head>
-  <body>
+  <body class="pagina-inicial">
     <!-- Mensagens do site ("foi adicionado à mochila!", "Você comprou...") -->
     <div id="aviso"></div>
 
     <header>
-        <button class="btn botao-inicio" id="botao-inicio">Início</button>
-        <button class="btn botao-sobre" id="botao-sobre">Sobre</button>
-        <div class="menu-niveis">
-            <button class="btn botao-niveis" id="botao-niveis">Níveis</button>
-            <!-- O JavaScript coloca os níveis aqui dentro -->
-            <ul id="lista-niveis"></ul>
-        </div>
-        <a href="index.html" class="logo-header">BackStore</a>
-        <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+      <button class="btn botao-inicio" id="botao-inicio">Início</button>
+      <button class="btn botao-sobre" id="botao-sobre">Sobre</button>
+      <div class="menu-niveis">
+        <button class="btn botao-niveis" id="botao-niveis">Níveis</button>
+        <!-- O JavaScript coloca os níveis aqui dentro -->
+        <ul id="lista-niveis"></ul>
+      </div>
+      <a href="index.html" class="logo-header">BackStore</a>
+      <a href="carrinho.html"
+        >Carrinho (<span id="contador-carrinho">0</span>)</a
+      >
     </header>
 
     <main>
@@ -56,23 +60,28 @@
 
       <!--botoes para pessoas burras no sobre-->
       <div class="navpe">
-
         <h1 id="titulonavpe">Navegar</h1>
 
-          <div class="botoespe">
+        <div class="botoespe">
           <div id="Inicio" class="btnpe">
-            <button class="btn botao-iniciope" id="botao-iniciope">Início</button>
+            <button class="btn botao-iniciope" id="botao-iniciope">
+              Início
+            </button>
           </div>
         </div>
         <div id="Niveis" class="btnpe">
-      <div class="menu-niveis">
-        <button class="btn botao-niveispe" id="botao-niveispe">Níveis</button>
-        <!-- O JavaScript coloca os níveis aqui dentro -->
-        <ul id="lista-niveis"></ul>
-      </div>
+          <div class="menu-niveis">
+            <button class="btn botao-niveispe" id="botao-niveispe">
+              Níveis
+            </button>
+            <!-- O JavaScript coloca os níveis aqui dentro -->
+            <ul id="lista-niveis"></ul>
+          </div>
         </div>
         <div id="Carrinho" class="btnpe">
-          <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+          <a href="carrinho.html"
+            >Carrinho (<span id="contador-carrinho">0</span>)</a
+          >
         </div>
       </div>
 

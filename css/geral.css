@@ -1,0 +1,267 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Nunito", sans-serif;
+}
+
+main {
+  padding: 16px;
+}
+
+h1,
+h2 {
+  color: var(--cor-titulo);
+}
+
+/* ===== Cabeçalho ===== */
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background-color: var(--cor-foot-head-bg);
+}
+
+header a {
+  margin-left: auto;
+  color: var(--cor-texto);
+  font-weight: bold;
+}
+
+.logo-header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 0px;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--cor-titulo);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* ===== Botões do cabeçalho ===== */
+.btn {
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.botao-inicio {
+  background-color: var(--btn);
+  width: 70px;
+  height: 40px;
+}
+
+.botao-inicio:hover {
+  background-color: var(--btn-hover);
+}
+
+.botao-sobre {
+  background-color: var(--btn);
+  width: 70px;
+  height: 40px;
+}
+
+.botao-sobre:hover {
+  background-color: var(--btn-hover);
+}
+
+.botao-niveis {
+  background-color: var(--btn);
+  width: 70px;
+  height: 40px;
+}
+
+.botao-niveis:hover {
+  background-color: var(--btn-hover);
+}
+
+/* ===== Menu de níveis ===== */
+.menu-niveis {
+  position: relative;
+}
+
+#lista-niveis {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  margin: 0;
+  margin-top: 8px;
+  padding: 8px;
+  list-style: none;
+  background-color: var(--cor-foot-head-bg);
+  border-radius: 12px;
+  z-index: 10;
+}
+
+#lista-niveis.aberta {
+  display: block;
+}
+
+#lista-niveis li {
+  margin-bottom: 8px;
+}
+
+.opcao-nivel {
+  display: block;
+  width: 100%;
+  padding: 8px 12px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.opcao-nivel:hover {
+  background-color: var(--btn-hover);
+}
+
+/* ===== Aviso no topo da tela ===== */
+#aviso {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  border-radius: 8px;
+  z-index: 20;
+}
+
+#aviso.visivel {
+  display: block;
+}
+
+/* ===== Rodapé ===== */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--cor-foot-head-bg);
+}
+
+.desenvolvimento {
+  padding-right: 30px;
+}
+
+#tituloDesenvolvido {
+  padding-right: 25px;
+}
+
+.redes {
+  padding-left: 40px;
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  align-items: center;
+  column-gap: 8px;
+  row-gap: 4px;
+}
+
+.redes p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+#LorePerfil,
+#ErlyPerfil,
+#LeoPerfil {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+#LorePerfil a,
+#ErlyPerfil a,
+#LeoPerfil a {
+  display: flex;
+}
+
+#texto-direitos {
+  margin-top: 50px;
+}
+
+.Direitos {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3%;
+}
+
+.Direitos h1 {
+  margin-left: 20%;
+  margin-bottom: 10%;
+}
+
+.Copyright #texto-direitos {
+  padding-left: 15%;
+  margin: 0px;
+  margin-top: 20%;
+}
+
+.Copyright #texto-direitos2 {
+  margin-bottom: 20%;
+}
+
+.navpe {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#Carrinho {
+  background-color: transparent;
+  width: 79px;
+  height: 23px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 8%;
+}
+
+#Carrinho a {
+  color: white;
+}
+
+#botao-iniciope {
+  margin-top: 10%;
+  margin-left: 20%;
+  background-color: transparent;
+  width: 70px;
+  height: 40px;
+}
+
+#botao-niveispe {
+  margin-left: 20%;
+  background-color: transparent;
+  width: 70px;
+  height: 40px;
+}
+
+#titulonavpe {
+  margin-bottom: 0%;
+  margin-top: 28%;
+}

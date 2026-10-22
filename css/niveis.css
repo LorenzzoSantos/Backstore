@@ -1,0 +1,83 @@
+/* ===== Cores padrão (Level 0) ===== */
+:root {
+  --cor-fundo: #c2b263;
+  --cor-titulo: rgb(253, 229, 164);
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: #6d5e13;
+  --btn: #8e7c21;
+  --btn-hover: #60541a;
+}
+
+/* ===== Cores de cada nível ===== */
+[data-nivel="level-1"] {
+  --cor-fundo: #c2b263;
+  --cor-titulo: rgb(253, 229, 164);
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: #6d5e13;
+  --btn: #8e7c21;
+  --btn-hover: #60541a;
+}
+
+[data-nivel="level-37"] {
+  --cor-fundo: #f5f7fa;
+  --cor-titulo: #4ef1dc;
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: #219f8e;
+  --btn: #42c3b2;
+  --btn-hover: #25746a;
+}
+
+[data-nivel="level-run"] {
+  --cor-fundo: #dc2626;
+  --cor-titulo: #ffcdcd;
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: #990000;
+  --btn: #b31212;
+  --btn-hover: #740e0e;
+}
+
+[data-nivel="level-fun"] {
+  --cor-fundo: #facc15;
+  --cor-titulo: #ffd787;
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: rgb(129, 68, 4);
+  --btn: rgb(195, 101, 0);
+  --btn-hover: #bf8511;
+}
+
+[data-nivel="level-4"] {
+  --cor-fundo: #d1c7bd;
+  --cor-titulo: #f1f5f9;
+  --cor-texto: #ffffff;
+  --cor-foot-head-bg: rgb(60, 65, 75);
+  --btn: #4a5568;
+  --btn-hover: #222833;
+}
+
+/* ===== Imagens de fundo (só na página inicial) ===== */
+.pagina-inicial {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Level 0: nenhum nível escolhido */
+.pagina-inicial:not([data-nivel]) {
+  background-image: url("../img/fundo-level0.jpg");
+}
+
+.pagina-inicial[data-nivel="level-37"] {
+  background-image: url("../img/fundo-level37.jpg");
+}
+
+.pagina-inicial[data-nivel="level-run"] {
+  background-image: url("../img/fundo-run.jpg");
+}
+
+.pagina-inicial[data-nivel="level-fun"] {
+  background-image: url("../img/fundo-fun.jpg");
+}
+
+.pagina-inicial[data-nivel="level-4"] {
+  background-image: url("../img/fundo-level4.jpg");
+}

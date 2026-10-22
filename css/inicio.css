@@ -1,0 +1,60 @@
+/* ===== Grades ===== */
+#mais-vendidos,
+#grade-produtos,
+#conheca-niveis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+/* ===== Cards de produto ===== */
+.card-produto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.card-produto img {
+  width: 100%;
+}
+
+.card-produto a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ===== Cards de "Conheça os níveis" ===== */
+.card-nivel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: var(--btn);
+}
+
+/* ===== Botões dos cards ===== */
+.card-botao,
+.card-nivel button {
+  margin-top: auto;
+  align-self: center;
+  width: 120px;
+  height: 70px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--cor-foot-head-bg);
+}
+
+.card-botao:hover,
+.card-nivel button:hover {
+  background-color: var(--btn-hover);
+}

@@ -1,36 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Produto | Backstore</title>
-    <link rel="stylesheet" href="css/Style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/geral.css" />
+    <link rel="stylesheet" href="css/niveis.css" />
+    <link rel="stylesheet" href="css/produto.css" />
+  </head>
+  <body>
     <!-- Mensagens do site ("foi adicionado à mochila!", "Você comprou...") -->
     <div id="aviso"></div>
 
     <header>
-        <button class="btn botao-inicio" id="botao-inicio">Início</button>
-        <button class="btn botao-sobre" id="botao-sobre">Sobre</button>
-        <div class="menu-niveis">
-            <button class="btn botao-niveis" id="botao-niveis">Níveis</button>
-            <!-- O JavaScript coloca os níveis aqui dentro -->
-            <ul id="lista-niveis"></ul>
-        </div>
-        <a href="index.html" class="logo-header">BackStore</a>
-        <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+      <button class="btn botao-inicio" id="botao-inicio">Início</button>
+      <button class="btn botao-sobre" id="botao-sobre">Sobre</button>
+      <div class="menu-niveis">
+        <button class="btn botao-niveis" id="botao-niveis">Níveis</button>
+        <!-- O JavaScript coloca os níveis aqui dentro -->
+        <ul id="lista-niveis"></ul>
+      </div>
+      <a href="index.html" class="logo-header">BackStore</a>
+      <a href="carrinho.html"
+        >Carrinho (<span id="contador-carrinho">0</span>)</a
+      >
     </header>
 
     <main>
-        <!-- O JavaScript coloca aqui o produto do endereço (ex.: produto.html?id=35) -->
-        <section id="detalhe-produto"></section>
+      <!-- O JavaScript coloca aqui o produto do endereço (ex.: produto.html?id=35) -->
+      <section id="detalhe-produto"></section>
     </main>
 
     <footer>
@@ -44,23 +54,28 @@
 
       <!--botoes para pessoas burras no sobre-->
       <div class="navpe">
-
         <h1 id="titulonavpe">Navegar</h1>
 
-          <div class="botoespe">
+        <div class="botoespe">
           <div id="Inicio" class="btnpe">
-            <button class="btn botao-iniciope" id="botao-iniciope">Início</button>
+            <button class="btn botao-iniciope" id="botao-iniciope">
+              Início
+            </button>
           </div>
         </div>
         <div id="Niveis" class="btnpe">
-      <div class="menu-niveis">
-        <button class="btn botao-niveispe" id="botao-niveispe">Níveis</button>
-        <!-- O JavaScript coloca os níveis aqui dentro -->
-        <ul id="lista-niveis"></ul>
-      </div>
+          <div class="menu-niveis">
+            <button class="btn botao-niveispe" id="botao-niveispe">
+              Níveis
+            </button>
+            <!-- O JavaScript coloca os níveis aqui dentro -->
+            <ul id="lista-niveis"></ul>
+          </div>
         </div>
         <div id="Carrinho" class="btnpe">
-          <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+          <a href="carrinho.html"
+            >Carrinho (<span id="contador-carrinho">0</span>)</a
+          >
         </div>
       </div>
 
@@ -103,5 +118,5 @@
     </footer>
 
     <script src="js/Script.js"></script>
-</body>
+  </body>
 </html>
