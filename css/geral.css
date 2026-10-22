@@ -1,4 +1,9 @@
+/* O body é uma coluna: header, main e footer. O main cresce e empurra o footer
+   para o fim da tela, mesmo quando a página é curta */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: var(--cor-fundo);
@@ -7,7 +12,13 @@ body {
 }
 
 main {
+  flex: 1;
   padding: 16px;
+}
+
+/* Botão não pega a fonte da página sozinho */
+button {
+  font-family: inherit;
 }
 
 h1,
@@ -21,7 +32,7 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px;
+  padding: 10px 16px;
   background-color: var(--cor-foot-head-bg);
 }
 
