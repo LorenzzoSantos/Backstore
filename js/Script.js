@@ -128,17 +128,19 @@ function salvarCarrinho() {
     atualizarContador()
 }
 
-//soma as quantidades e mostra no cabeçalho (id="contador-carrinho")
+//soma as quantidades e mostra no cabeçalho e no rodapé (id="contador-carrinho" e "contador-carrinho-pe")
 function atualizarContador() {
-    const contador = document.getElementById("contador-carrinho")
-    if (contador === null) {
-        return
-    }
     let total = 0
     for (let i = 0; i < carrinho.length; i++) {
         total = total + carrinho[i].quantidade
     }
-    contador.textContent = total
+    const contadores = ["contador-carrinho", "contador-carrinho-pe"]
+    for (let i = 0; i < contadores.length; i++) {
+        const contador = document.getElementById(contadores[i])
+        if (contador !== null) {
+            contador.textContent = total
+        }
+    }
 }
 
 //muda a quantidade de um produto: 1 adiciona, -1 tira (se chegar a zero, sai do carrinho)
@@ -192,6 +194,7 @@ atualizarContador()
 
 //#region Cabeçalho
 const botaoNiveis = document.getElementById("botao-niveis")
+const botaoNiveisPe = document.getElementById("botao-niveispe")
 const listaNiveis = document.getElementById("lista-niveis")
 
 //nível escolhido agora ("" = nenhum, ou seja, o tema padrão do Level 0); começa com o que estava guardado
@@ -249,26 +252,32 @@ if (listaNiveis !== null) {
 }
 
 //clicar no botão "Níveis" abre e fecha a lista; clicar fora dela fecha
+//o "Níveis" do rodapé sobe até o cabeçalho e abre a mesma lista
 document.addEventListener("click", function (evento) {
     if (botaoNiveis === null || listaNiveis === null) {
         return
     }
     if (botaoNiveis.contains(evento.target)) {
         listaNiveis.classList.toggle("aberta")
+    } else if (botaoNiveisPe !== null && botaoNiveisPe.contains(evento.target)) {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+        listaNiveis.classList.add("aberta")
     } else if (!listaNiveis.contains(evento.target)) {
         listaNiveis.classList.remove("aberta")
     }
 })
 
-//botão "Início": volta para o tema padrão e para o topo (nas outras páginas, vai para a página inicial)
-aoClicar("botao-inicio", function () {
+//botão "Início" (do cabeçalho e do rodapé): volta para o tema padrão e para o topo (nas outras páginas, vai para a página inicial)
+function voltarAoInicio() {
     escolherNivel("")
     if (estaNaPaginaInicial()) {
         window.scrollTo({ top: 0, behavior: "smooth" })
     } else {
         window.location.href = "index.html"
     }
-})
+}
+aoClicar("botao-inicio", voltarAoInicio)
+aoClicar("botao-iniciope", voltarAoInicio)
 
 //botão "Sobre": desce até o rodapé, onde estão as informações do grupo
 aoClicar("botao-sobre", function () {
