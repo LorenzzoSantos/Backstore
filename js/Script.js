@@ -369,18 +369,19 @@ if (detalheProduto !== null) {
         aplicarTema()
         document.title = produto.nome + " | Backstore"
 
-        detalheProduto.innerHTML = `
-            <img src="${produto.imagem}" alt="${produto.nome}">
-            <h1>${produto.nome}</h1>
-            <p class="detalhe-nivel">${buscarNivel(produto.nivel).nome}</p>
-            <p class="detalhe-descricao">${produto.descricao}</p>
-            <p class="detalhe-preco">${formatarPreco(produto.preco)}</p>
-            <p class="detalhe-estoque">${produto.estoque} unidades em estoque</p>
-            <button class="detalhe-botao">Adicionar ao carrinho</button>
-            <a href="index.html">← Voltar para a loja</a>`
-        detalheProduto.querySelector("button").addEventListener("click", function () {
-            mudarQuantidade(produto.id, 1)
-        })
+            detalheProduto.innerHTML = `
+            <div class="detalhe-imagem">
+                <img src="${produto.imagem}" alt="${produto.nome}">
+            </div>
+            <div class="detalhe-info">
+                <h1>${produto.nome}</h1>
+                <p class="detalhe-nivel">${buscarNivel(produto.nivel).nome}</p>
+                <p class="detalhe-descricao">${produto.descricao}</p>
+                <p class="detalhe-preco">${formatarPreco(produto.preco)}</p>
+                <p class="detalhe-estoque">${produto.estoque} unidades em estoque</p>
+                <button class="detalhe-botao">Adicionar ao carrinho</button>
+                <a href="index.html">← Voltar para a loja</a>
+            </div>`
     }
 }
 //#endregion
@@ -472,6 +473,12 @@ aoClicar("botao-comprar", function () {
     salvarCarrinho()
     mostrarCarrinho()
 })
+
+//a página do carrinho sempre fica com as cores padrão (Level 0)
+if (document.getElementById("lista-carrinho") !== null) {
+    nivelAtual = ""
+    aplicarTema()
+}
 
 //desenha o carrinho quando a página abre
 mostrarCarrinho()

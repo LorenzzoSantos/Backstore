@@ -17,16 +17,15 @@
     <div id="aviso"></div>
 
     <header>
-        <header>
-            <button class="btn botao-inicio" id="botao-inicio">Início</button>
-            <button class="btn botao-sobre" id="botao-sobre">Sobre</button>
-            <div class="menu-niveis">
-                <button class="btn botao-niveis" id="botao-niveis">Níveis</button>
-                <!-- O JavaScript coloca os níveis aqui dentro -->
-                <ul id="lista-niveis"></ul>
-            </div>
-            <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
-        </header>
+        <button class="btn botao-inicio" id="botao-inicio">Início</button>
+        <button class="btn botao-sobre" id="botao-sobre">Sobre</button>
+        <div class="menu-niveis">
+            <button class="btn botao-niveis" id="botao-niveis">Níveis</button>
+            <!-- O JavaScript coloca os níveis aqui dentro -->
+            <ul id="lista-niveis"></ul>
+        </div>
+        <a href="index.html" class="logo-header">BackStore</a>
+        <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
     </header>
     
     <main>
@@ -36,8 +35,7 @@
         <p id="total-carrinho"></p>
         <button id="botao-comprar">Comprar</button>
     </main>
-</body>
-
+    
     <footer>
         <div class="Direitos">
             <h1 id="titulo-direitos">Direitos</h1>
@@ -46,49 +44,68 @@
             <p id="texto-direitos2">Todos os direitos reservados</p>
         </div>
     </div>
-
+    
     <!--botoes para pessoas burras no sobre-->
-    <div class="botoespe">
-        <div id="LorePerfil" class="perfil"></div>
-            <a href="index.html"></a>
-        <p>Início</p>
+    <div class="navpe">
+        
+        <h1 id="titulonavpe">Navegar</h1>
+        
+        <div class="botoespe">
+            <div id="Inicio" class="btnpe">
+            <button class="btn botao-iniciope" id="botao-iniciope">Início</button>
+        </div>
     </div>
-    <div id="ErlyPerfil" class="perfil">
-        <a href=""></a>
-        <p>Níveis</p>
+    <div id="Niveis" class="btnpe">
+        <div class="menu-niveis">
+            <button class="btn botao-niveispe" id="botao-niveispe">Níveis</button>
+        <!-- O JavaScript coloca os níveis aqui dentro -->
+        <ul id="lista-niveis"></ul>
+      </div>
+        </div>
+        <div id="Carrinho" class="btnpe">
+            <a href="carrinho.html">Carrinho (<span id="contador-carrinho">0</span>)</a>
+        </div>
     </div>
-    <div id="LeoPerfil" class="perfil">
-        <a href="carrinho.html"><p>Carrinho</p></a>
-    </div>
-
-    </div>
-
-        <div class="desenvolvimento">
-            <h1>Desenvolvido Por</h1>
+    
+    <div class="desenvolvimento">
+        <h1>Desenvolvido Por</h1>
         <div id="redes" class="redes">
             <!-- Fazer com display "Row Column" pra ficar cada link um em baixo do outro-->
             <div id="LorePerfil" class="perfil">
                 <a href="https://github.com/LorenzzoSantos">
-                <img src="css/github_logo_icon_229278.webp" alt="Github do Lorenzzo" width="40px">
-            </a>
-            <p>Lorenzzo Santos</p>
-        </div>
-        <div id="ErlyPerfil" class="perfil">
-            <a href="https://github.com/PedroErly67">
-                <img src="css/github_logo_icon_229278.webp" alt="Github do Erly" width="40px">
-            </a>
-            <p>Pedro Corrêa</p>
-        </div>
-        <div id="LeoPerfil" class="perfil">
-            <a href="https://github.com/leonardoconto-bot">
-                <img src="css/github_logo_icon_229278.webp" alt="Github do Leonardo" width="40px">
-            </a>
-            <p>Leonardo Bevonesi</p>
+                    <img
+                    src="css/github_logo_icon_229278.webp"
+                    alt="Github do Lorenzzo"
+                    width="40px"
+                    />
+                </a>
+                <p>Lorenzzo Almeida</p>
+            </div>
+            <div id="ErlyPerfil" class="perfil">
+                <a href="https://github.com/PedroErly67">
+                    <img
+                    src="css/github_logo_icon_229278.webp"
+                    alt="Github do Erly"
+                    width="40px"
+                    />
+                </a>
+                <p>Pedro Pigosso</p>
+            </div>
+            <div id="LeoPerfil" class="perfil">
+                <a href="https://github.com/leonardoconto-bot">
+                    <img
+                    src="css/github_logo_icon_229278.webp"
+                    alt="Github do Leonardo"
+                    width="40px"
+                    />
+                </a>
+                <p>Leonardo Bevonesi</p>
+            </div>
         </div>
     </div>
-        </div>
+</footer>
 
-    </footer>
+<script src="js/Script.js"></script>
 
-    <script src="js/Script.js"></script>
+    </body>
 </html>

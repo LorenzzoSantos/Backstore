@@ -19,7 +19,7 @@
 [data-nivel="level-37"] {
   --cor-fundo: #f5f7fa;
   --cor-titulo: #4ef1dc;
-  --cor-texto: #ffffff;
+  --cor-texto: #222833;
   --cor-foot-head-bg: #219f8e;
   --btn: #42c3b2;
   --btn-hover: #25746a;
@@ -54,6 +54,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
   font-family: "Nunito", sans-serif;
@@ -70,6 +71,7 @@ h2 {
 
 /* ===== Cabeçalho ===== */
 header {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -81,6 +83,19 @@ header a {
   margin-left: auto;
   color: var(--cor-texto);
   font-weight: bold;
+}
+
+.logo-header {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 0px;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--cor-titulo);
+  text-decoration: none;
+  letter-spacing: 1px;
 }
 
 /* ===== Botões do cabeçalho ===== */
@@ -256,8 +271,65 @@ header a {
 }
 
 /* ===== Página do produto ===== */
+#detalhe-produto {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.detalhe-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+}
+
 #detalhe-produto img {
   width: 300px;
+}
+
+.detalhe-info {
+  flex: 1;
+  padding-left: 67px;
+  border-left: 4px solid var(--cor-foot-head-bg);
+}
+
+.detalhe-nivel {
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+.detalhe-preco {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.detalhe-botao {
+  display: block;
+  margin-bottom: 16px;
+  padding: 14px 32px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.detalhe-botao:hover {
+  background-color: var(--btn-hover);
+}
+
+.detalhe-info a {
+  color: var(--cor-texto);
+  font-weight: bold;
 }
 
 /* ===== Página do carrinho ===== */
@@ -273,6 +345,76 @@ header a {
 
 .item-carrinho img {
   width: 150px;
+}
+
+.item-carrinho a {
+  flex: 1;
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.item-menos,
+.item-mais {
+  width: 36px;
+  height: 36px;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.item-quantidade {
+  width: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item-remover {
+  padding: 8px 14px;
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--cor-foot-head-bg);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.item-remover:hover {
+  background-color: var(--btn-hover);
+}
+
+#total-carrinho {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#botao-comprar {
+  padding: 14px 32px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: var(--btn);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#botao-comprar:hover {
+  background-color: var(--btn-hover);
+}
+
+.item-menos:hover,
+.item-mais:hover {
+  background-color: var(--btn-hover);
 }
 
 /* ===== Rodapé ===== */
@@ -335,10 +477,60 @@ footer {
 
 .Direitos h1 {
   margin-left: 20%;
-  bottom: 40%;
+  margin-bottom: 10%;
 }
 
 .Copyright #texto-direitos {
   padding-left: 15%;
   margin: 0px;
+  margin-top: 20%;
+}
+
+.Copyright #texto-direitos2 {
+  margin-bottom: 20%;
+}
+
+.navpe {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#Carrinho {
+  background-color: none;
+  width: 79px;
+  height: 23px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 8%;
+}
+
+#Carrinho a{
+  color: white;
+}
+
+#botao-iniciope {
+  margin-top: 10%;
+  margin-left: 20%;
+  background-color: none;
+  background: none;
+  width: 70px;
+  height: 40px;
+}
+
+#botao-niveispe {
+  margin-left: 20%;
+  background-color: none;
+  background: none;
+  width: 70px;
+  height: 40px;
+}
+
+#titulonavpe {
+  margin-bottom: 0%;
+  margin-top: 28%;
 }
