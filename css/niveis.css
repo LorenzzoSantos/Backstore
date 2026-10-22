@@ -54,6 +54,13 @@
   --btn-hover: #222833;
 }
 
+/* Level 37: o fundo é bem claro, então o texto do main fica preto (o header e o footer continuam iguais) */
+[data-nivel="level-37"] main {
+  --cor-texto: #000000;
+  --cor-titulo: #000000;
+  color: var(--cor-texto);
+}
+
 /* ===== Imagens de fundo (só na página inicial) ===== */
 .pagina-inicial {
   background-size: cover;
