@@ -1,10 +1,10 @@
 //#region Níveis
 const niveis = [
-    { chave: "level-37", nome: "Level 37 - The Poolrooms", cor: "var(--level-agua)", descricao: "Piscinas sem fim, azulejos brancos e água morna. Calmo demais para ser seguro." },
-    { chave: "level-run", nome: "Level ! - Run For Your Life", cor: "var(--level-run)", descricao: "Um corredor infinito com luzes vermelhas. Não pare de correr." },
-    { chave: "level-fun", nome: "Level Fun =)", cor: "var(--level-fun)", descricao: "Uma festa que nunca acaba. Os Partygoers adoram visitas." },
-    { chave: "level-1", nome: "Level 1 - Habitable Zone", cor: "var(--level-shady)", descricao: "Um galpão de concreto com caixas de suprimentos. O lugar mais seguro das Backrooms." },
-    { chave: "level-4", nome: "Level 4 - Abandoned Office", cor: "var(--level-office)", descricao: "Um escritório vazio onde o expediente nunca termina." }
+    { chave: "level-37", nome: "Level 37 - The Poolrooms", descricao: "Piscinas sem fim, azulejos brancos e água morna. Calmo demais para ser seguro." },
+    { chave: "level-run", nome: "Level ! - Run For Your Life", descricao: "Um corredor infinito com luzes vermelhas. Não pare de correr." },
+    { chave: "level-fun", nome: "Level Fun =)", descricao: "Uma festa que nunca acaba. Os Partygoers adoram visitas." },
+    { chave: "level-1", nome: "Level 1 - Habitable Zone", descricao: "Um galpão de concreto com caixas de suprimentos. O lugar mais seguro das Backrooms." },
+    { chave: "level-4", nome: "Level 4 - Abandoned Office", descricao: "Um escritório vazio onde o expediente nunca termina." }
 ]
 //#endregion
 
@@ -211,14 +211,13 @@ function buscarNivel(chave) {
 }
 
 //pinta o site com a cor do nível escolhido (ou volta para o tema padrão do Level 0)
+//as cores de cada nível ficam no css/niveis.css, em [data-nivel="..."]
 function aplicarTema() {
     const nivel = buscarNivel(nivelAtual)
     if (nivel === null) {
         document.body.removeAttribute("data-nivel")
-        document.documentElement.style.removeProperty("--cor-nivel")
     } else {
         document.body.dataset.nivel = nivel.chave
-        document.documentElement.style.setProperty("--cor-nivel", nivel.cor)
     }
 }
 
@@ -345,7 +344,6 @@ if (estaNaPaginaInicial()) {
         const card = document.createElement("article")
         card.classList.add("card-nivel")
         card.dataset.nivel = niveis[i].chave
-        card.style.setProperty("--cor-card", niveis[i].cor)
         card.innerHTML = `
             <h3>${niveis[i].nome}</h3>
             <p>${niveis[i].descricao}</p>
