@@ -1,13 +1,15 @@
+/* Duas colunas do mesmo tamanho: a barra do meio fica embaixo da logo */
 #detalhe-produto {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 40px;
   max-width: 1000px;
   margin: 40px auto;
 }
 
+/* 40px de espaço dos dois lados da barra */
 .detalhe-imagem {
-  flex: 1;
+  margin-right: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +23,7 @@
 }
 
 .detalhe-info {
-  flex: 1;
-  padding-left: 67px;
+  padding-left: 40px;
   border-left: 4px solid var(--cor-foot-head-bg);
 }
 

@@ -1,10 +1,10 @@
 //#region Níveis
 const niveis = [
-    { chave: "level-37", nome: "Level 37 - The Poolrooms", cor: "var(--level-agua)", descricao: "Piscinas sem fim, azulejos brancos e água morna. Calmo demais para ser seguro." },
-    { chave: "level-run", nome: "Level ! - Run For Your Life", cor: "var(--level-run)", descricao: "Um corredor infinito com luzes vermelhas. Não pare de correr." },
-    { chave: "level-fun", nome: "Level Fun =)", cor: "var(--level-fun)", descricao: "Uma festa que nunca acaba. Os Partygoers adoram visitas." },
-    { chave: "level-1", nome: "Level 1 - Habitable Zone", cor: "var(--level-shady)", descricao: "Um galpão de concreto com caixas de suprimentos. O lugar mais seguro das Backrooms." },
-    { chave: "level-4", nome: "Level 4 - Abandoned Office", cor: "var(--level-office)", descricao: "Um escritório vazio onde o expediente nunca termina." }
+    { chave: "level-37", nome: "Level 37 - The Poolrooms", descricao: "Piscinas sem fim, azulejos brancos e água morna. Calmo demais para ser seguro." },
+    { chave: "level-run", nome: "Level ! - Run For Your Life", descricao: "Um corredor infinito com luzes vermelhas. Não pare de correr." },
+    { chave: "level-fun", nome: "Level Fun =)", descricao: "Uma festa que nunca acaba. Os Partygoers adoram visitas." },
+    { chave: "level-1", nome: "Level 1 - Habitable Zone", descricao: "Um galpão de concreto com caixas de suprimentos. O lugar mais seguro das Backrooms." },
+    { chave: "level-4", nome: "Level 4 - Abandoned Office", descricao: "Um escritório vazio onde o expediente nunca termina." }
 ]
 //#endregion
 
@@ -128,17 +128,19 @@ function salvarCarrinho() {
     atualizarContador()
 }
 
-//soma as quantidades e mostra no cabeçalho (id="contador-carrinho")
+//soma as quantidades e mostra no cabeçalho e no rodapé (id="contador-carrinho" e "contador-carrinho-pe")
 function atualizarContador() {
-    const contador = document.getElementById("contador-carrinho")
-    if (contador === null) {
-        return
-    }
     let total = 0
     for (let i = 0; i < carrinho.length; i++) {
         total = total + carrinho[i].quantidade
     }
-    contador.textContent = total
+    const contadores = ["contador-carrinho", "contador-carrinho-pe"]
+    for (let i = 0; i < contadores.length; i++) {
+        const contador = document.getElementById(contadores[i])
+        if (contador !== null) {
+            contador.textContent = total
+        }
+    }
 }
 
 //muda a quantidade de um produto: 1 adiciona, -1 tira (se chegar a zero, sai do carrinho)
@@ -192,6 +194,7 @@ atualizarContador()
 
 //#region Cabeçalho
 const botaoNiveis = document.getElementById("botao-niveis")
+const botaoNiveisPe = document.getElementById("botao-niveispe")
 const listaNiveis = document.getElementById("lista-niveis")
 
 //nível escolhido agora ("" = nenhum, ou seja, o tema padrão do Level 0); começa com o que estava guardado
@@ -208,14 +211,13 @@ function buscarNivel(chave) {
 }
 
 //pinta o site com a cor do nível escolhido (ou volta para o tema padrão do Level 0)
+//as cores de cada nível ficam no css/niveis.css, em [data-nivel="..."]
 function aplicarTema() {
     const nivel = buscarNivel(nivelAtual)
     if (nivel === null) {
         document.body.removeAttribute("data-nivel")
-        document.documentElement.style.removeProperty("--cor-nivel")
     } else {
         document.body.dataset.nivel = nivel.chave
-        document.documentElement.style.setProperty("--cor-nivel", nivel.cor)
     }
 }
 
@@ -249,26 +251,32 @@ if (listaNiveis !== null) {
 }
 
 //clicar no botão "Níveis" abre e fecha a lista; clicar fora dela fecha
+//o "Níveis" do rodapé sobe até o cabeçalho e abre a mesma lista
 document.addEventListener("click", function (evento) {
     if (botaoNiveis === null || listaNiveis === null) {
         return
     }
     if (botaoNiveis.contains(evento.target)) {
         listaNiveis.classList.toggle("aberta")
+    } else if (botaoNiveisPe !== null && botaoNiveisPe.contains(evento.target)) {
+        window.scrollTo({ top: 0, behavior: "smooth" })
+        listaNiveis.classList.add("aberta")
     } else if (!listaNiveis.contains(evento.target)) {
         listaNiveis.classList.remove("aberta")
     }
 })
 
-//botão "Início": volta para o tema padrão e para o topo (nas outras páginas, vai para a página inicial)
-aoClicar("botao-inicio", function () {
+//botão "Início" (do cabeçalho e do rodapé): volta para o tema padrão e para o topo (nas outras páginas, vai para a página inicial)
+function voltarAoInicio() {
     escolherNivel("")
     if (estaNaPaginaInicial()) {
         window.scrollTo({ top: 0, behavior: "smooth" })
     } else {
         window.location.href = "index.html"
     }
-})
+}
+aoClicar("botao-inicio", voltarAoInicio)
+aoClicar("botao-iniciope", voltarAoInicio)
 
 //botão "Sobre": desce até o rodapé, onde estão as informações do grupo
 aoClicar("botao-sobre", function () {
@@ -336,7 +344,6 @@ if (estaNaPaginaInicial()) {
         const card = document.createElement("article")
         card.classList.add("card-nivel")
         card.dataset.nivel = niveis[i].chave
-        card.style.setProperty("--cor-card", niveis[i].cor)
         card.innerHTML = `
             <h3>${niveis[i].nome}</h3>
             <p>${niveis[i].descricao}</p>
@@ -369,7 +376,7 @@ if (detalheProduto !== null) {
         aplicarTema()
         document.title = produto.nome + " | Backstore"
 
-            detalheProduto.innerHTML = `
+        detalheProduto.innerHTML = `
             <div class="detalhe-imagem">
                 <img src="${produto.imagem}" alt="${produto.nome}">
             </div>
@@ -382,6 +389,9 @@ if (detalheProduto !== null) {
                 <button class="detalhe-botao">Adicionar ao carrinho</button>
                 <a href="index.html">← Voltar para a loja</a>
             </div>`
+        detalheProduto.querySelector("button").addEventListener("click", function () {
+            mudarQuantidade(produto.id, 1)
+        })
     }
 }
 //#endregion

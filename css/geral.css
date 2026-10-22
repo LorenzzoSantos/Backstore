@@ -1,4 +1,9 @@
+/* O body é uma coluna: header, main e footer. O main cresce e empurra o footer
+   para o fim da tela, mesmo quando a página é curta */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-color: var(--cor-fundo);
@@ -7,7 +12,13 @@ body {
 }
 
 main {
+  flex: 1;
   padding: 16px;
+}
+
+/* Botão não pega a fonte da página sozinho */
+button {
+  font-family: inherit;
 }
 
 h1,
@@ -21,7 +32,7 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 10px;
+  padding: 10px 16px;
   background-color: var(--cor-foot-head-bg);
 }
 
@@ -151,117 +162,72 @@ header a {
 }
 
 /* ===== Rodapé ===== */
+/* Três colunas do mesmo tamanho; a do meio fica embaixo da logo */
 footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  padding: 24px 16px;
   background-color: var(--cor-foot-head-bg);
 }
 
+/* Cada coluna: tudo centralizado, um embaixo do outro */
+.Direitos,
+.navpe,
 .desenvolvimento {
-  padding-right: 30px;
-}
-
-#tituloDesenvolvido {
-  padding-right: 25px;
-}
-
-.redes {
-  padding-left: 40px;
-  display: grid;
-  grid-template-rows: repeat(4, auto);
-  grid-auto-flow: column;
-  align-items: center;
-  column-gap: 8px;
-  row-gap: 4px;
-}
-
-.redes p {
-  margin: 0;
-  display: flex;
-  align-items: center;
-}
-
-#LorePerfil,
-#ErlyPerfil,
-#LeoPerfil {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-}
-
-#LorePerfil a,
-#ErlyPerfil a,
-#LeoPerfil a {
-  display: flex;
-}
-
-#texto-direitos {
-  margin-top: 50px;
-}
-
-.Direitos {
   display: flex;
   flex-direction: column;
-  padding-left: 3%;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
 }
 
-.Direitos h1 {
-  margin-left: 20%;
-  margin-bottom: 10%;
+/* Os três títulos com o mesmo tamanho e na mesma altura */
+footer h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
 }
 
-.Copyright #texto-direitos {
-  padding-left: 15%;
-  margin: 0px;
-  margin-top: 20%;
+.Copyright p {
+  margin: 0 0 8px 0;
 }
 
-.Copyright #texto-direitos2 {
-  margin-bottom: 20%;
-}
-
-.navpe {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-#Carrinho {
-  background-color: transparent;
-  width: 79px;
-  height: 23px;
-  padding: 12px;
-  font-size: 14px;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  margin-left: 8%;
-}
-
+/* Início, Níveis e Carrinho com a mesma cara */
+#botao-iniciope,
+#botao-niveispe,
 #Carrinho a {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: bold;
   color: white;
-}
-
-#botao-iniciope {
-  margin-top: 10%;
-  margin-left: 20%;
   background-color: transparent;
-  width: 70px;
-  height: 40px;
+  text-decoration: none;
 }
 
-#botao-niveispe {
-  margin-left: 20%;
-  background-color: transparent;
-  width: 70px;
-  height: 40px;
+#botao-iniciope:hover,
+#botao-niveispe:hover,
+#Carrinho a:hover {
+  text-decoration: underline;
 }
 
-#titulonavpe {
-  margin-bottom: 0%;
-  margin-top: 28%;
+/* Os perfis do grupo: um embaixo do outro, ícone e nome lado a lado */
+.redes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.perfil a {
+  display: flex;
+}
+
+.perfil p {
+  margin: 0;
 }
