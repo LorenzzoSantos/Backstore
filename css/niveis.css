@@ -70,6 +70,10 @@
   background-image: url("../img/fundo-level37.jpg");
 }
 
+.pagina-inicial[data-nivel="level-1"] {
+  background-image: url("../img/fundo-level1.webp");
+}
+
 .pagina-inicial[data-nivel="level-run"] {
   background-image: url("../img/fundo-run.jpg");
 }
