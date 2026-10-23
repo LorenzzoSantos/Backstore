@@ -277,6 +277,9 @@ function voltarAoInicio() {
 }
 aoClicar("botao-inicio", voltarAoInicio)
 aoClicar("botao-iniciope", voltarAoInicio)
+aoClicar("btn-carrinho", function () {
+    window.location.href = "carrinho.html"
+})
 
 //botão "Sobre": desce até o rodapé, onde estão as informações do grupo
 aoClicar("botao-sobre", function () {

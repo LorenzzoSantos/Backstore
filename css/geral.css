@@ -96,6 +96,16 @@ header a {
   background-color: var(--btn-hover);
 }
 
+.botao-carrinho {
+  margin-left: auto;
+  background-color: var(--btn);
+  height: 40px;
+}
+
+.botao-carrinho:hover {
+  background-color: var(--btn-hover);
+}
+
 /* ===== Menu de níveis ===== */
 .menu-niveis {
   position: relative;
@@ -230,4 +240,16 @@ footer h1 {
 
 .perfil p {
   margin: 0;
+}
+
+#texto-direitos {
+  margin-top: 15%;
+}
+
+#Inicio {
+  margin-top: 15%;
+}
+
+#Inicio a {
+  color: #ffffff;
 }
