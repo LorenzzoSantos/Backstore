@@ -40,6 +40,10 @@
   background-color: var(--btn);
 }
 
+.card-nivel p {
+  font-size: 3.5vh;
+}
+
 /* Título sempre com espaço de duas linhas, pra descrição começar na mesma altura */
 .card-nivel h3 {
   min-height: 2.6em;

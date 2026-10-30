@@ -10,12 +10,12 @@
 
 /* ===== Cores de cada nível ===== */
 [data-nivel="level-1"] {
-  --cor-fundo: #c2b263;
-  --cor-titulo: rgb(253, 229, 164);
+  --cor-fundo: #5A5D60;
+  --cor-titulo: #E1E8EB;
   --cor-texto: #ffffff;
-  --cor-foot-head-bg: #6d5e13;
-  --btn: #8e7c21;
-  --btn-hover: #60541a;
+  --cor-foot-head-bg: #393939;
+  --btn: #3e3e3e;
+  --btn-hover: #2b2b2b;
 }
 
 [data-nivel="level-37"] {
